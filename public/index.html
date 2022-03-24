@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/styles">
     <title>Travis's Choice</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 
         <ul>
             <li> <div>
-                <img id="logo" src="../logo.jpeg" alt="" style="object-fit: head;">
+                <!-- <img id="logo" src="./logo.jpeg" alt="" style="object-fit: head;"> -->
             </div></li>
             <li><h1>Welcome to Travis's Choice!</h1></li>
             <!-- <li id="loginLink"><a href="login-signup.html">login/signup</a></li> -->
@@ -41,22 +41,24 @@
         
     </div>
 
-        
-    <section class="form-section">
-        <form id="locationForm" action="submit">
-            <label for="zipcode">Enter in your Zipcode:</label>
-                <input required type="text" name="zipcode" id="zipCode">
-                <br>
-                <br>
-            <label for="limit">Number of restaurants to choose from: </label>
-                <input required maxlength="25" type="number" name="limit" id="limit">
-                <br>
-                <br>
-            <button type="submit" class="button" id="loadRestBtn">Load restaurants</button>
-        </form>
-    </section>
+    <form id="locationForm">
+        <label for="zipcode">Enter in your Zipcode:</label>
+            <input required type="text" name="zipcode" id="zipCode" placeholder="zipcode">
+            <br>
+            <br>
+        <label for="limit">Number of restaurants to choose from: </label>
+            <input required maxlength="25" type="number" name="limit" id="limit">
+            <br>
+            <br>
+        <button  class="button" id="loadRestBtn">Load restaurants</button>
+    </form>
+    
+
+
     <br>
     <br>
+
+    <section id="display-container"> </section>
 
 
 
@@ -68,7 +70,7 @@
             <div class="grid-header">Price</div>  
             <div class="grid-header">Rating</div>
             <div class="grid-header">Add to Consideration</div>
-
+        
             <div class="grid-item name">Penny Ann's Cafe</div>
             <div class="grid-item price">$$</div>  
             <div class="grid-item rating">4.5</div>
@@ -84,8 +86,7 @@
     </section>
 
 
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
+    <script src="/js"></script>
 </body>
 </html>

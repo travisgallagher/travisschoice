@@ -2,14 +2,14 @@
     padding: 0;
     margin: 0;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: whitesmoke;
+    background-color: #7D8C82;
 }
 
 .head {
     padding: 0px;
     width: 100%;
     text-align: center;
-    background-color: rgba(119, 122, 140, 1);
+    background-color: #732F41;
     margin: 0px;
 }
 
@@ -26,8 +26,8 @@ h1 {
     padding: 0px;
     width: 100%;
     text-align: center;
-    background-color: rgba(119, 122, 140, 1);
-    color: white;
+    background-color: #7D8C82;
+    color: #0D0D0D
     margin-bottom: 20px;
 }
 
@@ -48,7 +48,7 @@ li {
     align-items: right;
     top: 0;
     right: 0;
-    background-color: darkgray;
+    background-color: #732F41;
     align-items: right;
 }
 
@@ -58,7 +58,7 @@ li {
     display: flexbox;
     justify-content: center;
     text-align: center;
-    background-color: rgba(119, 122, 140, 1);
+    background-color: #732F41
     align-items: center;
     align-content: center;
 }
@@ -72,7 +72,13 @@ li {
     text-align: center;
 }
 
+#budUI {
+    display: flexbox;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
 
+}
 
 
 
@@ -133,53 +139,3 @@ li {
     width:100px;
     bottom:10px;
 }
-
-/*LOGIN-SIGNUP */
-.main {
-    
-}
-
-
-
-/* Color Theme Swatches in Hex */
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-1-hex { color: #732F41; }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-2-hex { color: #7D8C82; }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-3-hex { color: #595136; }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-4-hex { color: #BFA26B; }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-5-hex { color: #0D0D0D; }
-
-/* Color Theme Swatches in RGBA */
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-1-rgba { color: rgba(114, 47, 65, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-2-rgba { color: rgba(124, 140, 130, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-3-rgba { color: rgba(89, 80, 54, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-4-rgba { color: rgba(191, 161, 107, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-5-rgba { color: rgba(12, 12, 12, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-1-hsla { color: hsla(343, 41, 31, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-2-hsla { color: hsla(140, 6, 51, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-3-hsla { color: hsla(44, 24, 28, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-4-hsla { color: hsla(39, 39, 58, 1); }
-.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-5-hsla { color: hsla(0, 0, 5, 1); }
-
-
-/* Color Theme Swatches in Hex */
-.The-andromeda-galaxy-1-hex { color: #212026; }
-.The-andromeda-galaxy-2-hex { color: #0C0C0D; }
-.The-andromeda-galaxy-3-hex { color: #777A8C; }
-.The-andromeda-galaxy-4-hex { color: #738CBF; }
-.The-andromeda-galaxy-5-hex { color: #A67C6D; }
-
-/* Color Theme Swatches in RGBA */
-.The-andromeda-galaxy-1-rgba { color: rgba(32, 31, 38, 1); }
-.The-andromeda-galaxy-2-rgba { color: rgba(11, 11, 12, 1); }
-.The-andromeda-galaxy-3-rgba { color: rgba(119, 122, 140, 1); }
-.The-andromeda-galaxy-4-rgba { color: rgba(114, 140, 191, 1); }
-.The-andromeda-galaxy-5-rgba { color: rgba(165, 124, 109, 1); }
-
-/* Color Theme Swatches in HSLA */
-.The-andromeda-galaxy-1-hsla { color: hsla(247, 9, 13, 1); }
-.The-andromeda-galaxy-2-hsla { color: hsla(236, 4, 4, 1); }
-.The-andromeda-galaxy-3-hsla { color: hsla(230, 8, 50, 1); }
-.The-andromeda-galaxy-4-hsla { color: hsla(219, 37, 60, 1); }
-.The-andromeda-galaxy-5-hsla { color: hsla(16, 23, 53, 1); }
