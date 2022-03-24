@@ -58,32 +58,23 @@
     <br>
     <br>
 
-    <section id="display-container"> </section>
+<div class="grid-container">
+    <div class="grid-header">Name</div>
+    <div class="grid-header">Price</div>  
+    <div class="grid-header">Rating</div>
+    <div class="grid-header">Add to Consideration</div>
+</div>
+
+<section class="hidden" id="bus-grid">
+    <div class="hidden grid-container">
+    </div>
 
 
-
-    <section>
-        <div class="grid-container">
-
-
-            <div class="grid-header">Name</div>
-            <div class="grid-header">Price</div>  
-            <div class="grid-header">Rating</div>
-            <div class="grid-header">Add to Consideration</div>
-        
-            <div class="grid-item name">Penny Ann's Cafe</div>
-            <div class="grid-item price">$$</div>  
-            <div class="grid-item rating">4.5</div>
-            <div class="grid-item checkbox"> 
-                <input type="checkbox" id="bus1" name="bus1" value="bus1">
-            </div>
-
-
-            <div class="pickBtn">
-                <button class="button" id="travisPick">Travis Pick!</button>
-            </div>
+        <div class="pickBtn">
+            <button class="button" id="travisPick">Travis Pick!</button>
         </div>
-    </section>
+
+</section>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

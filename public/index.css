@@ -82,7 +82,9 @@ li {
 
 
 
-
+.hidden {
+    display:none;
+}
 .grid-container {
         display: grid;
         justify-content: center;
