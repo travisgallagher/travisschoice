@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+.head {
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(119, 122, 140, 1);
+    margin: 0px;
+}
+
+#logo {
+    display: flexbox;
+    justify-content: left;
+    align-items: left;
+    position:sticky;
+	top:0; 
+	left:0; 
+}
+
+h1 {
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(119, 122, 140, 1);
+    color: white;
+    margin-bottom: 20px;
+}
+
+ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+#loginLink {
+    display: flexbox;
+    justify-content: right;
+    align-items: right;
+    top: 0;
+    right: 0;
+    background-color: darkgray;
+    align-items: right;
+}
+
+
+.firstHead{
+    color: black;
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(119, 122, 140, 1);
+    align-items: center;
+    align-content: center;
+}
+
+
+.form-section{
+    margin: auto;
+    width: 60%;
+    border: 5px solid darkgray;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+.grid-container {
+        display: grid;
+        justify-content: center;
+        align-items: flex-start;
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-auto-rows: 200px; */
+        align-items: flex-start;
+    }
+
+.grid-header {
+    background-color: rgba(119, 122, 140, 1);
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0px;
+    font-size: 12px;
+    text-align: center;
+    height: fit-content;
+}
+
+#loadRestBtn {
+    background-color:#0D0D0D;
+    color: #BFA26B;
+    font-weight: bold;
+    margin: auto;
+    width: auto;
+    text-align: center;    
+    padding: 5px;
+    text-decoration: bold;
+}
+
+#travisPick {
+    background-color: #0D0D0D;
+    color: #BFA26B;
+    font-weight: bold;
+    margin: auto;
+    width: auto;
+    text-align: center;
+
+    padding: 5px;
+    position:absolute; 
+    margin-left:-50px;
+    left:50%;
+    width:100px;
+    bottom:10px;
+}
+
+/*LOGIN-SIGNUP */
+.main {
+    
+}
+
+
+
+/* Color Theme Swatches in Hex */
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-1-hex { color: #732F41; }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-2-hex { color: #7D8C82; }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-3-hex { color: #595136; }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-4-hex { color: #BFA26B; }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-1-rgba { color: rgba(114, 47, 65, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-2-rgba { color: rgba(124, 140, 130, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-3-rgba { color: rgba(89, 80, 54, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-4-rgba { color: rgba(191, 161, 107, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-1-hsla { color: hsla(343, 41, 31, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-2-hsla { color: hsla(140, 6, 51, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-3-hsla { color: hsla(44, 24, 28, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-4-hsla { color: hsla(39, 39, 58, 1); }
+.Life-Beyond-Earth-|-SOM-|-La-Biennale-di-Venezia-5-hsla { color: hsla(0, 0, 5, 1); }
+
+
+/* Color Theme Swatches in Hex */
+.The-andromeda-galaxy-1-hex { color: #212026; }
+.The-andromeda-galaxy-2-hex { color: #0C0C0D; }
+.The-andromeda-galaxy-3-hex { color: #777A8C; }
+.The-andromeda-galaxy-4-hex { color: #738CBF; }
+.The-andromeda-galaxy-5-hex { color: #A67C6D; }
+
+/* Color Theme Swatches in RGBA */
+.The-andromeda-galaxy-1-rgba { color: rgba(32, 31, 38, 1); }
+.The-andromeda-galaxy-2-rgba { color: rgba(11, 11, 12, 1); }
+.The-andromeda-galaxy-3-rgba { color: rgba(119, 122, 140, 1); }
+.The-andromeda-galaxy-4-rgba { color: rgba(114, 140, 191, 1); }
+.The-andromeda-galaxy-5-rgba { color: rgba(165, 124, 109, 1); }
+
+/* Color Theme Swatches in HSLA */
+.The-andromeda-galaxy-1-hsla { color: hsla(247, 9, 13, 1); }
+.The-andromeda-galaxy-2-hsla { color: hsla(236, 4, 4, 1); }
+.The-andromeda-galaxy-3-hsla { color: hsla(230, 8, 50, 1); }
+.The-andromeda-galaxy-4-hsla { color: hsla(219, 37, 60, 1); }
+.The-andromeda-galaxy-5-hsla { color: hsla(16, 23, 53, 1); }
