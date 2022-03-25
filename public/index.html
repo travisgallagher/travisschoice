@@ -63,39 +63,40 @@
                 <input class="childForm" required type="number" name="limit" id="limit" min="0" max="50" >
                 <br>
                 <br>
-            <button  class="button" id="loadRestBtn">Load restaurants</button>
+            <button  class="button" id="loadRestBtn" onclick="">Load restaurants</button>
         </form>
 
     </section>
     
-    <section class="loaded-restaurants-sec">
-
+    <section class="hidden loaded-restaurants-sec">
+        <a id="goToTable" href="#restTable"></a>
         <h1>Local Restaurants</h1>
-        <table class="table" id="restaurants" style="width:80%">
+        <table class="table" id="restTable" style="width:80%">
             <tr>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Rating</th>
-                <th>Add to possible restaurant list</th>
+                <th>Add to possible meal choices</th>
             
             </tr>
-            <tr>
+            <!-- <tr>
                 <td>Alfreds Futterkiste</td>
                 <td>$$</td>
                 <td>4.5</td>
                 <td> 
                     <input type="checkbox" name="checkbox" id="checkbox" value="restSelected">
-                    <label for="checkbox"> Add to list</label><br>
+                    <label for="checkbox"> Add possible meal choice </label><br>
                 </td>
-            </tr>
+            </tr> -->
+            
         </table>
 
     </section>
 
 
 
-    <section class="bottom-div">
-        <h1>Your restaurant list!</h1>
+    <section class="hidden bottom-sec">
+        <h1>Your possible meal choices!</h1>
 
 <!-- MAKE A SORT FUNCTION -->
         <p><button onclick="sortUserTable()">Sort</button></p>
@@ -113,10 +114,10 @@
 
 
 
-        <button  class="button" id="travisBtn">Travis Pick!</button>
+    
         </section>  
 
-
+        <button  class="button" id="travisBtn">Travis Pick!</button>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

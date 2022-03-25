@@ -50,7 +50,9 @@ section {
     margin: 10px;
 }
 
-
+#goToTable {
+    scroll-behavior: smooth;
+}
 .info-ol {
     background-color: #0e310f;
     margin-left:auto;
@@ -141,24 +143,27 @@ input[type=number]:focus {
 }
 
 
+.hidden {
+    display:none;
+}
 
-#restaurants {
+.table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#restaurants td, #restaurants th {
+.table td, .table th {
     text-align: center;
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#restaurants tr:nth-child(even){background-color: #f2f2f2;}
+.table tr:nth-child(even){background-color: #f2f2f2;}
 
-#restaurants tr:hover {background-color: #ddd;}
+.table tr:hover {background-color: #ddd;}
 
-#restaurants th {
+.table th {
     text-align: center;
     font-weight: bold;
     padding-top: 12px;
@@ -174,7 +179,25 @@ input[type=number]:focus {
     margin-right: auto;
 }
 
-.hidden {
-    display:none;
-}
 
+
+/* Color Theme Swatches in Hex */
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-1-hex { color: #344037; }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-2-hex { color: #5C7339; }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-3-hex { color: #98BF45; }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-4-hex { color: #BF8969; }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-5-hex { color: #F26D3D; }
+
+/* Color Theme Swatches in RGBA */
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-1-rgba { color: rgba(51, 63, 54, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-2-rgba { color: rgba(91, 114, 57, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-3-rgba { color: rgba(152, 191, 68, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-4-rgba { color: rgba(191, 136, 105, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-5-rgba { color: rgba(242, 109, 60, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-1-hsla { color: hsla(134, 10, 22, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-2-hsla { color: hsla(84, 33, 33, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-3-hsla { color: hsla(78, 48, 51, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-4-hsla { color: hsla(22, 40, 58, 1); }
+.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-5-hsla { color: hsla(16, 87, 59, 1); }

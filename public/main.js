@@ -1,37 +1,40 @@
 const form = document.querySelector("#locationForm")
-const busSec = document.querySelector(".loaded-restaurants-sec")
 const hiddenClass = document.querySelector(".hidden")
-
+const restCheck = document.querySelector("#checkbox")
+let restTable = document.querySelector("#restTable")
 
 const choices = []
 
 const createBusUI = (businesses) => {
     console.log(businesses)
-    
-    busSec.innerHTML = ``
+
     hiddenClass.classList.remove(`hidden`);
 
     businesses.forEach((business) => {
         console.log(business)
-        let busElement =  `
-    
-            <div class="hidden grid-item outline">
-                <div class="hidden grid-item" id="name">${business.name}</div>
-                <div class="hidden grid-item" id="price">${business.price}</div>  
-                <div class="hidden grid-item" id="rating">${business.rating}</div>
-                <div class="hidden grid-item"> 
-                    <input type="checkbox" class="checkbox" id="busId" onclick="addRest(${business.id})">
-                </div>
-            </div>`
-        busGrid.innerHTML += busElement
-    
-    
+
+        let restTemplate = `
+            <tr>
+                <td>${business.name}</td>
+                <td>${business.price}</td>
+                <td>${business.rating}</td>
+                <td> 
+                    <input type="checkbox" name="checkbox" id="checkbox" onclick="addRest(${business.id})" value="restSelected">
+                    <label for="checkbox"> Add to list of possible meal choices </label><br>
+                </td>
+            </tr>`; 
+
+        restTable.innerHTML += restTemplate
     })
+
+    window.scrollTo(0, 1000); 
 }
 
 const addRest = (id) => {
-        let index = choices.findIndex(business => business.id === id)
-        choices.push(choices[index])
+        if (restCheck === true) {
+            let index = choices.findIndex(business => business.id === id)
+            choices.push(choices[index])
+        }
 }
     
 const getRestaurants = (e) => {
