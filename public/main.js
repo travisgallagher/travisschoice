@@ -1,5 +1,5 @@
 const form = document.querySelector("#locationForm")
-const busGrid = document.querySelector("#bus-grid")
+const busSec = document.querySelector(".loaded-restaurants-sec")
 const hiddenClass = document.querySelector(".hidden")
 
 
@@ -8,7 +8,7 @@ const choices = []
 const createBusUI = (businesses) => {
     console.log(businesses)
     
-    busGrid.innerHTML = ``
+    busSec.innerHTML = ``
     hiddenClass.classList.remove(`hidden`);
 
     businesses.forEach((business) => {

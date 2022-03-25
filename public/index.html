@@ -5,76 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles">
-    <title>Travis's Choice</title>
+    <title>Travis's Choice Home</title>
 </head>
-<body>
-    <header class="head">
 
-        <ul>
-            <li> <div>
-                <!-- <img id="logo" src="./logo.jpeg" alt="" style="object-fit: head;"> -->
-            </div></li>
-            <li><h1>Welcome to Travis's Choice!</h1></li>
-            <!-- <li id="loginLink"><a href="login-signup.html">login/signup</a></li> -->
+<body>
+
+    <header class="header">          
+        <ul class="nav">
+            <li class="nav-li"><a href="index.html">Home</a></li>
+            <li class="nav-li"><a href="login.html">Login</a></li>
+            <li class="nav-li"><a href="signup.html">Sign-up</a></li>
+            <li class="nav-li"><a href="contact.html">Contact</a></li>
         </ul>
     </header>
 
-<br>
-    <div class="firstHead">
-        <h4>What is Travis's choice?</h4>
+    <br>
+    <h1>Welcome to Travis's Choice!</h1>
+    <br>
+
+    <section class="intro-sec">
+        
+        <h4 class="info info-header"">What is Travis's choice?</h4>
         <br>
 
-        <p>Travis's choice is random restaurant selector. <br>
-            Pick which restaurants sound good, and I will decide which one you eat at!<br>
-            <br>
-            <br>
-            <label for="instructions" style="color: black; text-decoration: underline; font-weight: bold;">Instructions</label>
-            <br>
-            <br>
-            1. Enter your zipcode <br>
-            2. Select how many local restaurants you would like to look at. <br>
-            3. Push the "load restaurants button" <br>
-            4. Check the restaurants you want to be considered <br>
-            5. Submit! <br>
-
-        <br> 
+        <p class="info">Travis's choice is random restaurant selector. <br>
+            Pick which restaurants sound good, and I will decide which one you eat at!
+        <br>
+        <br>
         
-    </div>
 
-    <form id="locationForm">
-        <label for="zipcode">Enter in your Zipcode:</label>
-            <input required type="text" name="zipcode" id="zipCode" placeholder="zipcode">
-            <br>
-            <br>
-        <label for="limit">Number of restaurants to choose from: </label>
-            <input required maxlength="25" type="number" name="limit" id="limit">
-            <br>
-            <br>
-        <button  class="button" id="loadRestBtn">Load restaurants</button>
-    </form>
+        <h4 class="info info-header">Instructions:</h4>
+        <br>
+
+        
+        <ol type="1" class="info-ol">
+            <li>Enter your zipcode</li>
+            <li>Select the number of restaurants you would like to look at</li>
+            <li>Push the "load restaurants" button</li>
+            <li>Select the restaurants you want added to your list of possible meal choices</li>
+            <li>Push the "Travis Pick" button, and I will select which restaurant you eat at!</li>
+        </ol>
+
+
     
+    </section>
+
+    <section class="form-sec">
+
+        <form class="form" id="locationForm">
+
+            <label class="childFormLabel for="zipCode">Enter in your zipcode:</label>
+                <input class="childForm required type="text" name="zipCode" id="zipCode" placeholder="Your zipcode...">
+                <br>
+                <br>
+
+            <label class="childFormLabel for="limit"/>Number of restaurants to pick from: </label>
+                <input class="childForm" required type="number" name="limit" id="limit" min="0" max="50" >
+                <br>
+                <br>
+            <button  class="button" id="loadRestBtn">Load restaurants</button>
+        </form>
+
+    </section>
+    
+    <section class="loaded-restaurants-sec">
+
+        <h1>Local Restaurants</h1>
+        <table class="table" id="restaurants" style="width:80%">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Add to possible restaurant list</th>
+            
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>$$</td>
+                <td>4.5</td>
+                <td> 
+                    <input type="checkbox" name="checkbox" id="checkbox" value="restSelected">
+                    <label for="checkbox"> Add to list</label><br>
+                </td>
+            </tr>
+        </table>
+
+    </section>
 
 
-    <br>
-    <br>
 
-<div class="grid-container">
-    <div class="grid-header">Name</div>
-    <div class="grid-header">Price</div>  
-    <div class="grid-header">Rating</div>
-    <div class="grid-header">Add to Consideration</div>
-</div>
+    <section class="bottom-div">
+        <h1>Your restaurant list!</h1>
 
-<section class="hidden" id="bus-grid">
-    <div class="hidden grid-container">
-    </div>
+<!-- MAKE A SORT FUNCTION -->
+        <p><button onclick="sortUserTable()">Sort</button></p>
+        <table class="table" id="user-list" style="width:80%">
+            <tr>                
+                <th>Name</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
 
 
-        <div class="pickBtn">
-            <button class="button" id="travisPick">Travis Pick!</button>
-        </div>
 
-</section>
+
+
+
+
+
+        <button  class="button" id="travisBtn">Travis Pick!</button>
+        </section>  
+
+
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

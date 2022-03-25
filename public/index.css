@@ -2,142 +2,179 @@
     padding: 0;
     margin: 0;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #7D8C82;
+    background-color: lightgrey;
 }
 
-.head {
-    padding: 0px;
-    width: 100%;
-    text-align: center;
-    background-color: #732F41;
-    margin: 0px;
-}
-
-#logo {
-    display: flexbox;
-    justify-content: left;
-    align-items: left;
-    position:sticky;
-	top:0; 
-	left:0; 
-}
-
-h1 {
-    padding: 0px;
-    width: 100%;
-    text-align: center;
-    background-color: #7D8C82;
-    color: #0D0D0D
-    margin-bottom: 20px;
-}
-
-ul {
-    display: inline;
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: black;
 }
 
-li {
-    display: inline;
+.nav-li {
+    background-color: green;
+    float: left;
 }
 
-#loginLink {
-    display: flexbox;
-    justify-content: right;
-    align-items: right;
-    top: 0;
-    right: 0;
-    background-color: #732F41;
-    align-items: right;
-}
-
-
-.firstHead{
-    color: black;
-    display: flexbox;
-    justify-content: center;
+li a {
+    display: block;
+    background-color: black;
+    color: white;
     text-align: center;
-    background-color: #732F41
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: gray;
+}
+
+h1 {
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    align-content: center;
+    color: #732F41;
+    background-color: #BFA26B;
+}
+
+section {
+    height: auto;
+    padding: 15px; 
+    position: relative;
+    border: 3px solid green;
+    width: auto;
+    margin: 10px;
 }
 
 
-.form-section{
-    margin: auto;
-    width: 60%;
-    border: 5px solid darkgray;
-    padding: 10px;
+.info-ol {
+    background-color: #0e310f;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: left;
+    width: 50%;
+}
+
+.info {
+    margin-left:auto;
+    margin-right:auto;
     text-align: center;
+    width: 50%;
 }
 
-#budUI {
-    display: flexbox;
-    flex-direction: row;
+.info-header {
+    text-decoration: underline;
+    text-emphasis: bold;
+}
+
+.form {
+    border-radius: 5px;
+    text-align: center;
+    background-color: #BFA26B;
+    width: 95%;
+    height: auto;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 5px;
+}
+
+.childForm {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: #04AA6D;
+}
+
+.childFormLabel {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    background-color: #94f1cc;
+
+}
+
+input[type=text]{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-bo
+}
+
+input[type=text]:focus {
+    background-color: rgb(24, 176, 226);
+}
+
+
+input[type=number]{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-bo
+}
+
+input[type=number]:focus {
+    background-color: lightblue;
+}
+
+
+.button {
+    width: auto;
     justify-content: center;
-    text-align: center;
-
+    background-color: #0e310f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 
+
+#restaurants {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#restaurants td, #restaurants th {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#restaurants tr:nth-child(even){background-color: #f2f2f2;}
+
+#restaurants tr:hover {background-color: #ddd;}
+
+#restaurants th {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: rgb(19, 3, 3);
+}
+
+.table{
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .hidden {
     display:none;
 }
-.grid-container {
-        display: grid;
-        justify-content: center;
-        align-items: flex-start;
-        grid-template-columns: repeat(4, 1fr);
-        /* grid-auto-rows: 200px; */
-        align-items: flex-start;
-    }
 
-.grid-header {
-    background-color: rgba(119, 122, 140, 1);
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 0px;
-    font-size: 12px;
-    text-align: center;
-    height: fit-content;
-}
-
-#loadRestBtn {
-    background-color:#0D0D0D;
-    color: #BFA26B;
-    font-weight: bold;
-    margin: auto;
-    width: auto;
-    text-align: center;    
-    padding: 5px;
-    text-decoration: bold;
-}
-
-#travisPick {
-    background-color: #0D0D0D;
-    color: #BFA26B;
-    font-weight: bold;
-    margin: auto;
-    width: auto;
-    text-align: center;
-
-    padding: 5px;
-    position:absolute; 
-    margin-left:-50px;
-    left:50%;
-    width:100px;
-    bottom:10px;
-}
