@@ -2,33 +2,41 @@
     padding: 0;
     margin: 0;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: lightgrey;
+    background-color: #979DA6;
 }
+/* .background{
+    background-image: url("./background.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 
 .nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #0D0D0D;
 }
 
 .nav-li {
-    background-color: green;
+    background-color: #0D0D0D;
     float: left;
 }
 
 li a {
     display: block;
-    background-color: black;
-    color: white;
+    background-color: #0D0D0D;
+    color:#F2F2F2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: gray;
+    background-color: #121D40;
 }
 
 h1 {
@@ -37,15 +45,49 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #732F41;
-    background-color: #BFA26B;
+    font-weight: bold;
+    text-shadow: 4px 4px #373C40; 
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%;
+    color: #F2F2F2;
+    background-color: #0D0D0D;
+}
+
+.header{
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 1px 1px #636A73; 
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%;
+    color: #0D0D0D;
+    background-color: #979DA6;
+}
+.text{
+    border: 3px solid #344037 ;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #979DA6 ;
+    color: #0D0D0D;
 }
 
 section {
     height: auto;
     padding: 15px; 
     position: relative;
-    border: 3px solid green;
+    border: 3px solid #344037;
+    border-radius: 10px;
+    background-color: #373C40;
     width: auto;
     margin: 10px;
 }
@@ -53,88 +95,46 @@ section {
 #goToTable {
     scroll-behavior: smooth;
 }
-.info-ol {
-    background-color: #0e310f;
-    margin-left:auto;
-    margin-right:auto;
-    text-align: left;
-    width: 50%;
-}
 
 .info {
     margin-left:auto;
     margin-right:auto;
+    padding: 10px;
     text-align: center;
-    width: 50%;
+    width: 90%;
+    border: 3px solid #344037 ;
+    border-radius: 15px;
+    background-color: #636A73;
+    color: #344037;
 }
 
-.info-header {
-    text-decoration: underline;
-    text-emphasis: bold;
-}
-
-.form {
-    border-radius: 5px;
-    text-align: center;
-    background-color: #BFA26B;
-    width: 95%;
-    height: auto;
-    white-space: nowrap;
-    overflow-x: auto;
-    padding: 20px;
-    margin: 5px;
+.info-ol {
+    background-color: #979DA6 3 ;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: left;
+    width: 75%;
 }
 
 .childForm {
     display: inline-block;
-    width: 50%;
-    height: 100%;
-    background-color: #04AA6D;
+    width: 10%;
+    height: 50%;
+    background-color: #F2F2F2;
 }
 
 .childFormLabel {
     display: inline-block;
-    width: auto;
-    height: 100%;
-    background-color: #94f1cc;
+    background-color: #979DA6;
+    font-weight: bold;
 
 }
-
-input[type=text]{
-    width: 40%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-bo
-}
-
-input[type=text]:focus {
-    background-color: rgb(24, 176, 226);
-}
-
-
-input[type=number]{
-    width: 10%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-bo
-}
-
-input[type=number]:focus {
-    background-color: lightblue;
-}
-
 
 .button {
     width: auto;
     justify-content: center;
-    background-color: #0e310f;
-    color: white;
+    background-color: #0D0D0D;
+    color:#F2F2F2;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -147,15 +147,9 @@ input[type=number]:focus {
     display:none;
 }
 
-.table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
 .table td, .table th {
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #344037;
     padding: 8px;
 }
 
@@ -169,35 +163,32 @@ input[type=number]:focus {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
-    color: rgb(19, 3, 3);
+    background-color: #0D0D0D;
+    color: #F2F2F2;
 }
 
 .table{
-    margin: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px;
     margin-left: auto;
     margin-right: auto;
+    font-size: small;
 }
 
+/* Color Theme*/
+/* 
+{ color: #344037; }
+{ color: #5C7339; }
+{ color: #98BF45; }
+{ color: #BF8969; }
+{ color: #F26D3D; } 
 
 
-/* Color Theme Swatches in Hex */
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-1-hex { color: #344037; }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-2-hex { color: #5C7339; }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-3-hex { color: #98BF45; }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-4-hex { color: #BF8969; }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-5-hex { color: #F26D3D; }
-
-/* Color Theme Swatches in RGBA */
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-1-rgba { color: rgba(51, 63, 54, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-2-rgba { color: rgba(91, 114, 57, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-3-rgba { color: rgba(152, 191, 68, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-4-rgba { color: rgba(191, 136, 105, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-5-rgba { color: rgba(242, 109, 60, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-1-hsla { color: hsla(134, 10, 22, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-2-hsla { color: hsla(84, 33, 33, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-3-hsla { color: hsla(78, 48, 51, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-4-hsla { color: hsla(22, 40, 58, 1); }
-.Abstract-food-background.-Top-view-of-dark-rustic-kitchen-table-with-wooden-cutting-board-and-cooking-spoon,-frame.-Banner-or-template-with-copy-space-for-your-design.-Kitchen-utensils-objects-5-hsla { color: hsla(16, 87, 59, 1); }
+{ color: #636A73; }
+{ color: #979DA6; }
+{ color: #373C40; }
+{ color: #F2F2F2; }
+{ color: #0D0D0D; }
+*/

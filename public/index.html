@@ -8,9 +8,8 @@
     <title>Travis's Choice Home</title>
 </head>
 
-<body>
-
-    <header class="header">          
+<body class="background">
+    <header class="header-nav">          
         <ul class="nav">
             <li class="nav-li"><a href="index.html">Home</a></li>
             <li class="nav-li"><a href="login.html">Login</a></li>
@@ -18,33 +17,27 @@
             <li class="nav-li"><a href="contact.html">Contact</a></li>
         </ul>
     </header>
-
-    <br>
+<br>
     <h1>Welcome to Travis's Choice!</h1>
-    <br>
 
     <section class="intro-sec">
         
-        <h4 class="info info-header"">What is Travis's choice?</h4>
-        <br>
-
-        <p class="info">Travis's choice is random restaurant selector. <br>
-            Pick which restaurants sound good, and I will decide which one you eat at!
-        <br>
-        <br>
         
+        <div class="info">
+            <h4 class="header"">What is Travis's choice?</h4>
 
-        <h4 class="info info-header">Instructions:</h4>
-        <br>
-
-        
-        <ol type="1" class="info-ol">
-            <li>Enter your zipcode</li>
-            <li>Select the number of restaurants you would like to look at</li>
-            <li>Push the "load restaurants" button</li>
-            <li>Select the restaurants you want added to your list of possible meal choices</li>
-            <li>Push the "Travis Pick" button, and I will select which restaurant you eat at!</li>
-        </ol>
+            <p class="text">Travis's choice is random restaurant selector. <br>
+                Pick which restaurants sound good, and I will decide which one you eat at!</p>
+            
+            <h4 class="header">Instructions:</h4>
+            <ol type="1" class="text">
+                <li class="info-ol">Enter your zipcode</li>
+                <li class="info-ol">Select the number of restaurants you would like to look at</li>
+                <li class="info-ol">Push the "load restaurants" button</li>
+                <li class="info-ol">Select the restaurants you want added to your list of possible meal choices</li>
+                <li class="info-ol">Push the "Travis Pick" button, and I will select which restaurant you eat at!</li>
+            </ol>
+        </div>
 
 
     
@@ -52,34 +45,41 @@
 
     <section class="form-sec">
 
-        <form class="form" id="locationForm">
+        <form class="info" id="locationForm">
+            <label class="header" id="form-header" for="form">Enter your information</label>
 
-            <label class="childFormLabel for="zipCode">Enter in your zipcode:</label>
-                <input class="childForm required type="text" name="zipCode" id="zipCode" placeholder="Your zipcode...">
-                <br>
-                <br>
+            <div class="text">
+                <label class="childFormLabel for="zipCode">Enter in your zipcode:</label>
+                    <input class="childForm required type="text" name="zipCode" id="zipCode" placeholder="zipcode...">
+                    <br>
 
-            <label class="childFormLabel for="limit"/>Number of restaurants to pick from: </label>
-                <input class="childForm" required type="number" name="limit" id="limit" min="0" max="50" >
-                <br>
-                <br>
-            <button  class="button" id="loadRestBtn" onclick="">Load restaurants</button>
+                <label class="childFormLabel for="limit"/>Number of restaurants to pick from: </label>
+                    <input class="childForm" required type="number" name="limit" id="limit" min="0" max="50" placeholder="number..." >
+            </div>
+
+            <button  class="button" id="loadRestBtn">Load restaurants</button>
         </form>
 
     </section>
     
     <section class="hidden loaded-restaurants-sec">
         <a id="goToTable" href="#restTable"></a>
-        <h1>Local Restaurants</h1>
-        <table class="table" id="restTable" style="width:80%">
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Rating</th>
-                <th>Add to possible meal choices</th>
+        <div class="info">
+
             
-            </tr>
-        </table>
+            <h1 class="header">Local Restaurants</h1>
+            <table class="table" id="restTable" style="width:80%">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Add to possible meal choices</th>
+                    
+                </tr>
+            </table>
+            
+        </div>
+        
 
     </section>
 

@@ -36,6 +36,9 @@ app.get("/styles", function(req, res) {
     res.sendFile(path.join(path.join(__dirname, "../public/index.css")))
 }) 
 
+app.get("/", function(req, res) {
+    res.sendFile(path.join(path.join(__dirname, "../public/background.jpeg")))
+})
 // Actual Endpoints
 
 app.get("/locations/:zipCode/:limit", getLocations)
