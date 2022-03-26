@@ -8,14 +8,44 @@
     <title>Travis's Choice Home</title>
 </head>
 <body>
-    <header class="header">          
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign-up</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <header class="header-nav">          
+        <ul class="nav">
+            <li class="nav-li"><a href="./">Home</a></li>
+            <li class="nav-li"><a href="./login">Login</a></li>
+            <li class="nav-li"><a href="./signup">Sign-up</a></li>
+            <li class="nav-li"><a href="./contact">Contact</a></li>
         </ul>
     </header>
+
+<br>
+<h1>Login Form</h1>
+<br>
+<section>
+    <form class="info" id="login-form">
+        <label class="loginLab" for="user-name"><b>Username</b></label>
+        <br>
+            <input class="loginTxt" type="text" placeholder="Enter Username" name="user-name" required>
+        <br><br>
+        <label class="loginLab" for="password"><b>Password</b></label>
+        <br>
+            <input class="loginTxt" type="password" placeholder="Enter Password" name="password" required>
+        <br><br>
+            <span class="psw"> <a class="pwd" href="./">Forgot password?</a></span>
+        <br><br>
+        <button class="button" type="submit">Login</button>
+        <br>
+        <label>
+            <input class="psw" type="checkbox" checked="checked" name="remember"> Remember me </label>
+        </label>
+        <br><br>
+        <br>
+        <h5>Don't have an account? <a href="./signup">Sign-up here!</a> </h5>
+        
+        
+    
+
+    </form>
+</section>
 
 
 

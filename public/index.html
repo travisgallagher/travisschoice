@@ -8,21 +8,19 @@
     <title>Travis's Choice Home</title>
 </head>
 
-<body class="background">
+<body>
     <header class="header-nav">          
         <ul class="nav">
-            <li class="nav-li"><a href="index.html">Home</a></li>
-            <li class="nav-li"><a href="login.html">Login</a></li>
-            <li class="nav-li"><a href="signup.html">Sign-up</a></li>
-            <li class="nav-li"><a href="contact.html">Contact</a></li>
+            <li class="nav-li"><a href="./">Home</a></li>
+            <li class="nav-li"><a href="./login">Login</a></li>
+            <li class="nav-li"><a href="./signup">Sign-up</a></li>
+            <li class="nav-li"><a href="./contact">Contact</a></li>
         </ul>
     </header>
 <br>
     <h1>Welcome to Travis's Choice!</h1>
-
+<br>
     <section class="intro-sec">
-        
-        
         <div class="info">
             <h4 class="header"">What is Travis's choice?</h4>
 
@@ -38,28 +36,20 @@
                 <li class="info-ol">Push the "Travis Pick" button, and I will select which restaurant you eat at!</li>
             </ol>
         </div>
-
-
-    
     </section>
 
     <section class="form-sec">
-
         <form class="info" id="locationForm">
             <label class="header" id="form-header" for="form">Enter your information</label>
-
             <div class="text">
                 <label class="childFormLabel for="zipCode">Enter in your zipcode:</label>
                     <input class="childForm required type="text" name="zipCode" id="zipCode" placeholder="zipcode...">
                     <br>
-
                 <label class="childFormLabel for="limit"/>Number of restaurants to pick from: </label>
                     <input class="childForm" required type="number" name="limit" id="limit" min="0" max="50" placeholder="number..." >
             </div>
-
             <button  class="button" id="loadRestBtn">Load restaurants</button>
         </form>
-
     </section>
     
     <section class="hidden loaded-restaurants-sec">

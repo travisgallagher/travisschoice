@@ -3,16 +3,8 @@
     margin: 0;
     font-family:Arial, Helvetica, sans-serif;
     background-color: #979DA6;
-}
-/* .background{
-    background-image: url("./background.jpeg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
-
+/* Home css */}
 .nav {
     list-style-type: none;
     margin: 0;
@@ -46,7 +38,7 @@ h1 {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    text-shadow: 4px 4px #373C40; 
+    text-shadow: px 4px #373C40; 
 
     margin-left: auto;
     margin-right: auto;
@@ -177,15 +169,72 @@ section {
     font-size: small;
 }
 
+/* Login css */
+
+.loginLab {
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 1px 1px #636A73; 
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%;
+    color: #0D0D0D;
+    background-color: #979DA6;
+}
+
+.loginTxt {
+    border: 3px solid #344037 ;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #F2F2F2 ;
+    color: #0D0D0D;
+}
+
+
+.psw {
+    background-color: #979DA6 ;
+    border-radius: 3px solid #344037;
+
+}
+
+/* Sign-up css */
+
+/* contact-us css */
+
+#travis-pic {
+    max-width: 25%;
+    height: auto;
+    border-radius: 15px;
+}
+
+#message{
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+#email {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+}
+
+::placeholder{
+    color: grey;
+    font-size: small;
+    vertical-align: text-top;
+}
 /* Color Theme*/
 /* 
-{ color: #344037; }
-{ color: #5C7339; }
-{ color: #98BF45; }
-{ color: #BF8969; }
-{ color: #F26D3D; } 
-
-
 { color: #636A73; }
 { color: #979DA6; }
 { color: #373C40; }

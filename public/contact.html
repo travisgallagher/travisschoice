@@ -8,16 +8,63 @@
     <title>Travis's Choice Home</title>
 </head>
 <body>
-    <header class="header">          
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign-up</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <header class="header-nav">          
+        <ul class="nav">
+            <li class="nav-li"><a href="./">Home</a></li>
+            <li class="nav-li"><a href="./login">Login</a></li>
+            <li class="nav-li"><a href="./signup">Sign-up</a></li>
+            <li class="nav-li"><a href="./contact">Contact</a></li>
         </ul>
     </header>
+<br>
+<h1>Contact Travis!</h1>
+<br>
+
+<section class="intro-sec">
+    <div class="info">
+        <h4 class="header"">Who is Travis?</h4>
+
+        <p class="text">I am a current student at Devmountain, who created travis's choice as his first project! <br>
+                Me and my wife can never decide where to eat at. <br>
+                I also work as a Critical Care Technician in the Cardiac ICU at Intermountain Medical Center. <br>
+                I came up with the idea, after all of the nurses I work with couldn't decide on where to eat for lunch. <br>
+                My solution: create a website that chooses where you eat for you! <br>
+                Thank you Cardiac ICU nurses for helping me with this idea, your the best! </p>
+        <br>
+        <img id="travis-pic" src="https://scontent.fslc3-1.fna.fbcdn.net/v/t39.30808-6/271198624_2987523321563219_7163449403433182167_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=ulSEWxtvt2EAX-Mvci7&_nc_ht=scontent.fslc3-1.fna&oh=00_AT8TBXVLnf5sfkzrRTFT8rFcmo0Q0D6Fz9JCxa2KThPkVQ&oe=62425948"
+        alt="picture of Travis">
+        <br>
+    </div>
+</section>
 
 
+
+<section class="form-sec">
+    <form class="info" id="locationForm">
+        <label class="header" id="form-header" for="form">Enter your information</label>
+        <div class="text">
+            <label class="childFormLabel for="fname">First Name:</label>
+                <input class="childForm required type="text" name="fname" id="fname" placeholder="first name...">
+                <br>
+                <br>
+            <label class="childFormLabel for="lname"/>Last Name: </label>
+                <input class="childForm" required type="text" name="lname" id="lname" placeholder="last name..." >
+                <br>
+                <br>
+            <label class="childFormLabel for="email"/>Email Address: </label>
+                <input class="childForm" required type="text" name="email" id="email" placeholder="anyemail@gmail.com" >
+                <br>
+                <br>
+            <label class="childFormLabel message" for="message">Please enter your message:</label>
+            <br>
+            <br>  
+            <input type="childForm" required type="text" name="message" id="message" placeholder="I love Travis's choice!">
+            <br>
+            <br>
+        </div>
+        <button  class="button" id="submit-message">Submit Message</button>
+    </form>
+</section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js"></script>

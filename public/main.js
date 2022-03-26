@@ -1,4 +1,4 @@
-const form = document.querySelector("#locationForm")
+const locForm = document.querySelector("#locationForm")
 const hiddenClass = document.querySelector(".hidden")
 const restCheck = document.querySelector("#checkbox")
 let restTable = document.querySelector("#restTable")
@@ -52,7 +52,7 @@ const getRestaurants = (e) => {
 
 
 
-form.addEventListener("submit", getRestaurants)
+locForm.addEventListener("submit", getRestaurants)
 
 
 

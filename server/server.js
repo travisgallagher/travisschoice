@@ -36,9 +36,22 @@ app.get("/styles", function(req, res) {
     res.sendFile(path.join(path.join(__dirname, "../public/index.css")))
 }) 
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(path.join(__dirname, "../public/background.jpeg")))
+app.get("/login", function(req, res) {
+    res.sendFile(path.join(path.join(__dirname, "../public/login.html")))
 })
+
+
+app.get("/signup", function(req, res) {
+    res.sendFile(path.join(path.join(__dirname, "../public/signup.html")))
+})
+
+
+app.get("/contact", function(req, res) {
+    res.sendFile(path.join(path.join(__dirname, "../public/contact.html")))
+})
+
+
+
 // Actual Endpoints
 
 app.get("/locations/:zipCode/:limit", getLocations)
