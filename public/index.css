@@ -38,7 +38,7 @@ h1 {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    text-shadow: px 4px #373C40; 
+    text-shadow: 3px 3px gray; 
 
     margin-left: auto;
     margin-right: auto;
@@ -50,13 +50,13 @@ h1 {
 
 .header{
     border-radius: 25px;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    text-shadow: 1px 1px #636A73; 
+    border: 3px solid black ;
 
     margin-left: auto;
     margin-right: auto;
@@ -66,9 +66,10 @@ h1 {
     background-color: #979DA6;
 }
 .text{
-    border: 3px solid #344037 ;
+    border: 3px solid black ;
     border-radius: 10px;
-    padding: 5px;
+    padding: 20px;
+    margin: 10px;
     background-color: #979DA6 ;
     color: #0D0D0D;
 }
@@ -77,7 +78,7 @@ section {
     height: auto;
     padding: 15px; 
     position: relative;
-    border: 3px solid #344037;
+    border: 3px solid black;
     border-radius: 10px;
     background-color: #373C40;
     width: auto;
@@ -94,7 +95,7 @@ section {
     padding: 10px;
     text-align: center;
     width: 90%;
-    border: 3px solid #344037 ;
+    border: 3px solid #979DA6 ;
     border-radius: 15px;
     background-color: #636A73;
     color: #344037;
@@ -110,13 +111,15 @@ section {
 
 .childForm {
     display: inline-block;
-    width: 10%;
+    width: 75%;
+    margin: 15px;
     height: 50%;
     background-color: #F2F2F2;
 }
 
 .childFormLabel {
     display: inline-block;
+    margin: 15px;
     background-color: #979DA6;
     font-weight: bold;
 
@@ -132,35 +135,64 @@ section {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 1px 1px 10px 5px #979DA6;
 }
 
-
-.hidden {
+/* .hidden {
     display:none;
-}
+} */
 
-.table td, .table th {
+table.table td, table.table th {
     text-align: center;
-    border: 1px solid #344037;
+    color: #0D0D0D;
+    border: 1px solid #ddd;
     padding: 8px;
 }
 
-.table tr:nth-child(even){background-color: #f2f2f2;}
+table.table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
 
-.table tr:hover {background-color: #ddd;}
+table.table tr:hover td {
+    background-color: pink
+}
 
-.table th {
+table.table th {
     text-align: center;
     font-weight: bold;
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #0D0D0D;
     color: #F2F2F2;
 }
 
-.table{
+.table td {
+    color: black;
+    font-weight: bold;
+}
+
+/* added after video */
+.table-sortable th {
+    cursor: pointer;
+}
+.table-sortable .th-sort-asc::after{
+    content: "\25b4";
+    color: #F2F2F2;
+}
+.table-sortable .th-sort-desc::after{
+    content: "\25be";
+    color: #F2F2F2;
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+}
+
+.table {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     border-collapse: collapse;
     width: 100%;
     margin: 5px;
@@ -168,6 +200,20 @@ section {
     margin-right: auto;
     font-size: small;
 }
+
+.checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #0D0D0D;
+}
+
+#travisBtn {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    align-self: center;
+}
+
 
 /* Login css */
 
@@ -179,7 +225,7 @@ section {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    text-shadow: 1px 1px #636A73; 
+    text-decoration: underline;
 
     margin-left: auto;
     margin-right: auto;
@@ -235,6 +281,8 @@ section {
     font-size: small;
     vertical-align: text-top;
 }
+
+
 /* Color Theme*/
 /* 
 { color: #636A73; }

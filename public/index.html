@@ -17,16 +17,19 @@
             <li class="nav-li"><a href="./contact">Contact</a></li>
         </ul>
     </header>
+
 <br>
     <h1>Welcome to Travis's Choice!</h1>
 <br>
+
     <section class="intro-sec">
         <div class="info">
             <h4 class="header"">What is Travis's choice?</h4>
 
-            <p class="text">Travis's choice is random restaurant selector. <br>
-                Pick which restaurants sound good, and I will decide which one you eat at!</p>
-            
+            <p class="text">
+                Travis's choice is random restaurant selector. <br>
+                Pick which restaurants sound good, and I will decide which one you eat at! <br>
+            </p>
             <h4 class="header">Instructions:</h4>
             <ol type="1" class="text">
                 <li class="info-ol">Enter your zipcode</li>
@@ -52,52 +55,71 @@
         </form>
     </section>
     
-    <section class="hidden loaded-restaurants-sec">
+    <section class="hidden">
         <a id="goToTable" href="#restTable"></a>
         <div class="info">
 
-            
             <h1 class="header">Local Restaurants</h1>
-            <table class="table" id="restTable" style="width:80%">
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Rating</th>
-                    <th>Add to possible meal choices</th>
-                    
-                </tr>
-            </table>
-            
-        </div>
-        
+            <table class="table table-sortable" id="restTable" style="width:80%">
 
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Add to list</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>test</td>
+                        <td>$</td>
+                        <td>4.5</td>
+                        <td> 
+                            <input type="checkbox" name="checkbox" class="checkbox">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>another test</td>
+                        <td>$$</td>
+                        <td>3</td>
+                        <td> 
+                            <input type="checkbox" name="checkbox" class="checkbox">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>yet another test</td>
+                        <td>$$$</td>
+                        <td>2</td>
+                        <td> 
+                            <input type="checkbox" name="checkbox" class="checkbox">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>dummy test</td>
+                        <td>$</td>
+                        <td>5</td>
+                        <td> 
+                            <input type="checkbox" name="checkbox" class="checkbox">
+                        </td>
+                    </tr>
+
+                </tbody>
+                
+            </table>
+
+            <button  class="button" id="add-choices">Add selected to your list</button>
+
+        </div>
     </section>
 
 
-
-    <section class="hidden bottom-sec">
-        <h1>Your possible meal choices!</h1>
-
-<!-- MAKE A SORT FUNCTION -->
-        <p><button onclick="sortUserTable()">Sort</button></p>
-        <table class="table" id="user-list" style="width:80%">
-            <tr>                
-                <th>Name</th>
-                <th>Price</th>
-                <th>Rating</th>
-            </tr>
-
-
-
-
-
-
-
-
-    
-        </section>  
-
-        <button  class="button" id="travisBtn">Travis Pick!</button>
+    <button  class="button" id="travisBtn">Travis choose my meal!</button>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
