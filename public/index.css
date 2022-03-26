@@ -195,6 +195,7 @@ section {
     padding: 5px;
     background-color: #F2F2F2 ;
     color: #0D0D0D;
+    text-align: center;
 }
 
 
@@ -216,7 +217,8 @@ section {
 
 #message{
     display: inline-block;
-    width: 400px;
+    max-width: 75%;
+    width: 70%;
     height: 200px;
     text-align: center;
     background-color: #F2F2F2;
