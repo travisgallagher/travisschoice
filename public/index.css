@@ -28,7 +28,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #121D40;
+    background-color: #636A73;
 }
 
 h1 {
@@ -154,7 +154,7 @@ table.table tr:nth-child(even) td {
 }
 
 table.table tr:hover td {
-    background-color: pink
+    background-color: aqua
 }
 
 table.table th {

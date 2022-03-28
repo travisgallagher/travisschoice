@@ -24,10 +24,10 @@
 
     <section class="intro-sec">
         <div class="info">
-            <h4 class="header"">What is Travis's choice?</h4>
+            <h4 class="header"">What is Travis's Choice?</h4>
 
             <p class="text">
-                Travis's choice is random restaurant selector. <br>
+                Travis's Choice is a random restaurant selector. <br>
                 Pick which restaurants sound good, and I will decide which one you eat at! <br>
             </p>
             <h4 class="header">Instructions:</h4>
@@ -65,6 +65,7 @@
                 <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Description</th>
                         <th>Price</th>
                         <th>Rating</th>
                         <th>Add to list</th>
@@ -75,37 +76,41 @@
 
                     <tr>
                         <td>test</td>
+                        <td>dddd</td>
                         <td>$</td>
                         <td>4.5</td>
                         <td> 
-                            <input type="checkbox" name="checkbox" class="checkbox">
+                            <input type="checkbox" value="test" class="checkbox">
                         </td>
                     </tr>
 
                     <tr>
                         <td>another test</td>
+                        <td>ccccc</td>
                         <td>$$</td>
                         <td>3</td>
                         <td> 
-                            <input type="checkbox" name="checkbox" class="checkbox">
+                            <input type="checkbox" value="anotherTest" class="checkbox">
                         </td>
                     </tr>
 
                     <tr>
                         <td>yet another test</td>
+                        <td>aaaaa</td>
                         <td>$$$</td>
                         <td>2</td>
                         <td> 
-                            <input type="checkbox" name="checkbox" class="checkbox">
+                            <input type="checkbox" value="yetAnotherTest" class="checkbox">
                         </td>
                     </tr>
 
                     <tr>
                         <td>dummy test</td>
+                        <td>bbbbb</td>
                         <td>$</td>
                         <td>5</td>
                         <td> 
-                            <input type="checkbox" name="checkbox" class="checkbox">
+                            <input type="checkbox" value="dummyTest" class="checkbox">
                         </td>
                     </tr>
 
@@ -118,9 +123,13 @@
         </div>
     </section>
 
+    <section id="results">
+        <h1>Your choices</h1>
+    
 
-    <button  class="button" id="travisBtn">Travis choose my meal!</button>
 
+        <button  class="button" id="travisBtn">Travis choose my meal!</button>
+    </section>      
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js"></script>

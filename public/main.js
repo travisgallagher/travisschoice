@@ -6,6 +6,47 @@ let nameCol = document.querySelector("#name-col")
 let priceCol = document.querySelector("#price-col")
 let ratingCol = document.querySelector("#rating-col")
 let tableHeader = document.querySelector("th")
+let results = document.querySelector("#results")
+
+
+// const getSelectedRest = () => {
+//     let checkbox = document.querySelector(`input[type="checkbox"]:checked`)
+// }
+
+
+function createRow(business) {
+            
+    let newRow = restTable.insertRow(); 
+    let nameCell = newRow.insertCell();
+    let nameText = document.createTextNode(`${business.name}`)
+    nameCell.appendChild(nameText)
+    
+    let descCell = newRow.insertCell();
+    for (let i = 0; i < business.categories.length; i++) {
+        
+        
+        let descText = document.createTextNode(`${business.categories[i].title}`)
+        descCell.appendChild(descText)
+    }
+    
+    let priceCell = newRow.insertCell();
+    let priceText = document.createTextNode(`${business.price}`)
+    priceCell.appendChild(priceText)
+    
+    let ratingCell = newRow.insertCell();
+    let ratingText = document.createTextNode(`${business.rating}`)
+    ratingCell.appendChild(ratingText)
+    
+    let checkBoxCell = newRow.insertCell(); 
+    let cb = document.createElement(`input`)
+    cb.type = `checkbox`;
+    cb.value = `${business.name}`
+    cb.class = "checkbox"
+    cb.id = "id"
+    checkBoxCell.appendChild(cb);
+
+}
+
 
 const choices = []
 
@@ -15,20 +56,9 @@ const createBusUI = (businesses) => {
     hiddenClass.classList.remove(`hidden`);
 
     businesses.forEach((business) => {
-        console.log(business)
+        // console.log(business)
+        let newRow = createRow(business)
 
-        let restTemplate = `
-            <tr>
-                <td>${business.name}</td>
-                <td>${business.price}</td>
-                <td>${business.rating}</td>
-                <td> 
-                    <label for="checkbox"> Add to your list</label><br>
-                    <input type="checkbox" name="checkbox" class="checkbox" >
-                </td>
-            </tr>`; 
-
-        restTable.innerHTML += restTemplate
     })
 
     window.scrollTo(0, 1000); 
@@ -67,27 +97,36 @@ function sortTableByColumn(table, column, asc = true) {
     const tBody = table.tBodies[0];
     const rows = Array.from(tBody.querySelectorAll("tr")); 
 
+
     if (column !== 1) {
         sortedRows = rows.sort((a, b) => {
-            const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
-            const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
-
-            // console.log(aColText)
-            // console.log(bColText)
-
+        const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+        const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+        
         return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
-            
     })
-    // PROBLEM WITH ELSE STATEMENT, SORTING WORKS WHEN I COMMENT OUT ELSE
-    //     } else {
-    //     sortedRows = rows.sort((a, b) => {
-    //         const aColPrice = parseFloat(a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
-    //         const bColPrice = parseFloat(b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
-    
-    //     // console.log(aColPrice)
-    //     // console.log(bColPrice)
-    //      return aColPrice > bColPrice ? (1 * dirModifier) : (-1 * dirModifier);
-    // }) 
+    } else {
+        sortedRows = rows.sort((a, b) => {
+        const aColPrice = parseFloat(a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+        const bColPrice = parseFloat(b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+        
+        return aColPrice > bColPrice ? (1 * dirModifier) : (-1 * dirModifier);
+    })}
+    if (column !== 1) {
+        sortedRows = rows.sort((a, b) => {
+        const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+        const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+        
+        return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+    })
+    } else {
+        sortedRows = rows.sort((a, b) => {
+        const aColPrice = parseFloat(a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+        const bColPrice = parseFloat(b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+        
+        return aColPrice > bColPrice ? (1 * dirModifier) : (-1 * dirModifier);
+    })
+    }
 
     // Remove all existing TRs from the table
     while(tBody.firstChild) {
@@ -101,9 +140,10 @@ function sortTableByColumn(table, column, asc = true) {
     table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc")); 
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc)
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc)
-}
 
-}
+    }
+
+//}
 
 document.querySelectorAll(".table-sortable th").forEach(headerCell => {
     headerCell.addEventListener("click", () => {
@@ -114,10 +154,6 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
         sortTableByColumn(tableElement, headerIndex, !currentIsAscending); 
     })
 })
-
-
-
-
 
 sortTableByColumn(document.querySelector("table"), 0); 
 
