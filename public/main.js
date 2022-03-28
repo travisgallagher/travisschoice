@@ -1,3 +1,4 @@
+
 const locForm = document.querySelector("#locationForm")
 const hiddenClass = document.querySelector(".hidden")
 const restCheck = document.querySelector("#checkbox")
@@ -7,16 +8,16 @@ let priceCol = document.querySelector("#price-col")
 let ratingCol = document.querySelector("#rating-col")
 let tableHeader = document.querySelector("th")
 let results = document.querySelector("#results")
+let addChoiceBtn = document.querySelector("#add-choices")
 
 
-// const getSelectedRest = () => {
-//     let checkbox = document.querySelector(`input[type="checkbox"]:checked`)
-// }
 
+let choices = []
 
 function createRow(business) {
-            
-    let newRow = restTable.insertRow(); 
+    let tbody = document.querySelector(`#t-body`)
+
+    let newRow = tbody.insertRow(); 
     let nameCell = newRow.insertCell();
     let nameText = document.createTextNode(`${business.name}`)
     nameCell.appendChild(nameText)
@@ -25,7 +26,7 @@ function createRow(business) {
     for (let i = 0; i < business.categories.length; i++) {
         
         
-        let descText = document.createTextNode(`${business.categories[i].title}`)
+        let descText = document.createTextNode(`${business.categories[i].title} `)
         descCell.appendChild(descText)
     }
     
@@ -41,34 +42,36 @@ function createRow(business) {
     let cb = document.createElement(`input`)
     cb.type = `checkbox`;
     cb.value = `${business.name}`
-    cb.class = "checkbox"
-    cb.id = "id"
+    cb.classList.add("checkbox");
+    cb.id = JSON.stringify(business)
+    
     checkBoxCell.appendChild(cb);
-
 }
 
-
-const choices = []
-
 const createBusUI = (businesses) => {
-    console.log(businesses)
 
     hiddenClass.classList.remove(`hidden`);
 
     businesses.forEach((business) => {
-        // console.log(business)
-        let newRow = createRow(business)
+        createRow(business)
 
     })
 
     window.scrollTo(0, 1000); 
 }
 
-const addRest = (id) => {
-        if (restCheck === true) {
-            let index = choices.findIndex(business => business.id === id)
-            choices.push(choices[index])
-        }
+const addRest = () => {
+        let checkboxes = document.querySelectorAll(".checkbox")
+        console.log({checkboxes})
+        checkboxes.forEach(element => {
+            console.log(element)
+            const elID = element.getAttribute('id')
+            console.log(JSON.parse(elID))
+
+            if(element.checked) {
+                choices.push(JSON.parse(elID))
+            } 
+        });        
 }
     
 const getRestaurants = (e) => {
@@ -81,16 +84,6 @@ const getRestaurants = (e) => {
         })
         .catch((err) => {console.log(err)})
     }
-
-
-
-/**
- * Sorts a HTML table.
- * 
- * @param {HTMLTableElement} table The table to sort
- * @param {number} column The index of the column to sort 
- * @param {boolean} asc Determines if the sorting will be in ascending order
- */
 
 function sortTableByColumn(table, column, asc = true) {
     const dirModifier = asc ? 1 : -1; 
@@ -143,8 +136,6 @@ function sortTableByColumn(table, column, asc = true) {
 
     }
 
-//}
-
 document.querySelectorAll(".table-sortable th").forEach(headerCell => {
     headerCell.addEventListener("click", () => {
         const tableElement = headerCell.parentElement.parentElement.parentElement; 
@@ -156,12 +147,16 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
 })
 
 sortTableByColumn(document.querySelector("table"), 0); 
+sortTableByColumn(document.querySelector("table"), 1); 
+sortTableByColumn(document.querySelector("table"), 2); 
+sortTableByColumn(document.querySelector("table"), 3); 
+sortTableByColumn(document.querySelector("table"), 4); 
 
 
 
 
 
 locForm.addEventListener("submit", getRestaurants)
-
+addChoiceBtn.addEventListener("click", addRest)
 
 
