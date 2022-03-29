@@ -335,6 +335,25 @@ table.table th {
     vertical-align: text-top;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px; 
+    background-color: #979DA6;
+    width: auto;
+    margin: 10px;
+}
+
+
+#logo{
+    border-radius: 15px;
+    max-width: 200px;
+    max-height: 200px;
+
+}
 
 /* Color Theme*/
 /* 

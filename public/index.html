@@ -24,13 +24,13 @@
 
     <section class="intro-sec">
         <div class="info">
-            <h4 class="header"">What is Travis's Choice?</h4>
+            <h1 class="header"">What is Travis's Choice?</h1>
 
             <p class="text">
                 Travis's Choice is a random restaurant selector. <br>
                 Pick which restaurants sound good, and I will decide which one you eat at! <br>
             </p>
-            <h4 class="header">Instructions:</h4>
+            <h1 class="header">Instructions:</h1>
             <ol type="1" class="text">
                 <li class="info-ol">Enter your zipcode</li>
                 <li class="info-ol">Select the number of restaurants you would like to look at</li>
@@ -54,6 +54,7 @@
                 <label class="childFormLabel for="limit"/>Number of restaurants to pick from: </label>
                     <input class="loginTxt" required type="number" name="limit" id="limit" min="0" max="50" placeholder="0" >
             </div>
+            <br>
             <button  class="button" id="loadRestBtn">Load restaurants</button>
         </form>
     </section>
@@ -63,6 +64,7 @@
         <div class="info">
 
             <h1 class="header">Local Restaurants</h1>
+            <br>
             <table class="table table-sortable" id="restTable" style="width:80%">
 
                 <thead>
@@ -80,8 +82,9 @@
                 </tbody>
                 
             </table>
-
+            <br>
             <button  class="button" id="add-choices">Add selected to your list</button>
+            <br>
 
         </div>
     </section>
@@ -110,6 +113,7 @@
             </table>
             <br>          
             <button  class="button" id="travisBtn">Travis Choose!</button>
+            <br>
         </div>
     </section>
 
@@ -120,8 +124,16 @@
 
 
         </div>
+        <br>
         <button class="button" id="home-button">Go Home</button>
+        <br>
     </section>
+
+    <footer>
+        <img id="logo" src="https://lh3.googleusercontent.com/d1DdPZBl1nV6e90IrxjzZ7GV-BTXerPoKimZncH0jxSSO5WPz7eZDnHc1zODTmaX7cvkHXAccplegBJW0aSoNESHX-SmLYGtEoMNGnYedcflHwLMmPshNc56ZCsJN_RvDNqTlp4now=s200-p-k" alt="Travis's Logo">
+    </footer>
+
+    
     
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
