@@ -82,11 +82,10 @@ function createFinalCard(restaurant) {
     <p>${restaurant.transactions[0]}, ${restaurant.transactions[1]}</p>
     
     <br>
-    <h4>Website: </h4>
+    <h4>Website on Yelp: </h4>
     <p class="url"><a href="${restaurant.url}">${restaurant.name}</a></p>
     <br>
     `
-
 
     displayDiv.appendChild(finalCard)
     window.scrollTo(0, document.body.scrollHeight); 
