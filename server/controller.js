@@ -4,8 +4,6 @@ let DB = [];
 function getLocations(req, res) {
     
     const {zipCode, limit} = req.params
-
-    //// now we are going to hit 3rd party API yelp data
         authenticatedAxios.get(`/search?location=${zipCode}&limit=${limit}&category=food`)
         .then((response) => {
             res.send(response.data)
@@ -15,7 +13,6 @@ function getLocations(req, res) {
 }
 
 function saveChoices(req, res) {
-    // 1. store data
     DB = req.body.choices;
     res.send(req.body);
 }
