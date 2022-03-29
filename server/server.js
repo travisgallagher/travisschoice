@@ -50,10 +50,7 @@ app.get("/contact", function(req, res) {
     res.sendFile(path.join(path.join(__dirname, "../public/contact.html")))
 })
 
-
-
 // Actual Endpoints
-
 
 app.get("/choices", getChoices)
 app.delete("/choices/:id", deleteChoice)

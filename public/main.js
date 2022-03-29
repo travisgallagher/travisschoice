@@ -1,26 +1,40 @@
-
 const locForm = document.querySelector("#locationForm")
 const hiddenClass1 = document.querySelector(".hidden1")
 const hiddenClass2 = document.querySelector(".hidden2")
 const hiddenClass3 = document.querySelector(".hidden3")
-const restCheck = document.querySelector("#checkbox")
-let restTable = document.querySelector("#restTable")
-let nameCol = document.querySelector("#name-col")
-let priceCol = document.querySelector("#price-col")
-let ratingCol = document.querySelector("#rating-col")
-let tableHeader = document.querySelector("th")
-let results = document.querySelector("#results")
+const hiddenClass4 = document.querySelector(".hidden4")
+const introSection = document.querySelector(`.intro-sec`)
 let addChoiceBtn = document.querySelector("#add-choices")
-
 let travisChooseBtn = document.querySelector("#travisBtn")
-let displayFinal = document.querySelector("#display-final")
 let displayDiv = document.getElementById("final-div")
+let getStartedBtn = document.getElementById("get-started")
 
+const getStarted = (e) => {
+    hiddenClass4.classList.remove(`hidden4`)
+    introSection.classList.add(`hidden5`)
+}
+
+const getRestaurants = (e) => {
+    e.preventDefault()
+    let zipCode = document.querySelector("#zipCode").value
+    let limit = document.querySelector("#limit").value
+    axios.get(`http://localhost:4004/locations/${zipCode}/${limit}`)
+        .then((response) => {
+            createBusUI(response.data.businesses)
+        })
+        .catch((err) => {console.log(err)})
+    }
+
+const createBusUI = (businesses) => {
+    hiddenClass1.classList.remove(`hidden1`);
+    businesses.forEach((business) => {
+        createRow(business)
+    })
+    window.scrollTo(0, 1000); 
+}
 
 function createRow(business) {
-
     let tbody = document.querySelector(`#t-body`)
-
     let newRow = tbody.insertRow(); 
 
     let nameCell = newRow.insertCell();
@@ -53,74 +67,32 @@ function createRow(business) {
     checkBoxCell.appendChild(cb);
 }
 
-
-
-
-function createFinalCard(restaurant) {
-    const finalCard = document.createElement('div')
-
-    finalCard.classList.add('final-card')
-
-    finalCard.innerHTML = `
-    <br>
-    <h1 class="header">${restaurant.name}</h1>
+const addRest = () => {
+    hiddenClass1.classList.add(`hidden1`);
+    hiddenClass4.classList.add(`hidden4`);
     
-    <br>
-    <img alt='restaurant image' src=${restaurant.image_url} class="restaurant-image"/>
-    
-    <br>
-    <h4>Phone Number: </h4>
-    <p class="phone">${restaurant.phone}</p>
-    
-    <br>
-    <h4>Address: </h4>
-    <p class="address"> ${restaurant.location.address1}, 
-    <br>${restaurant.location.city}, ${restaurant.location.state}, ${restaurant.location.zip_code} </p>
-    
-    <br>
-    <h4>Type of transactions: </h4>
-    <p>${restaurant.transactions[0]}, ${restaurant.transactions[1]}</p>
-    
-    <br>
-    <h4>Website on Yelp: </h4>
-    <p class="url"><a href="${restaurant.url}">${restaurant.name}</a></p>
-    <br>
-    `
-
-    displayDiv.appendChild(finalCard)
-    window.scrollTo(0, document.body.scrollHeight); 
-}
-
-
-function getRandomRest (choice){
-    // 1. get the choices from backend
-    // 2. randomize them
-    // 3. do something with the one you get back 
-    
-    console.log("function getting hit")
-    axios.get(`http://localhost:4004/choices`)
-        .then((response) => {
-            console.log(response)
-        let choicesArr = response.data.DB
-        console.log(choicesArr)
-        let arrLength = choicesArr.length
-        let randomChoice_index = Math.floor(Math.random() * (arrLength))
-        let finalChoice = choicesArr[randomChoice_index]
-        console.log(finalChoice) 
-
-        createFinalCard(finalChoice)
-        hiddenClass3.classList.remove(`hidden3`)
-        window.scrollTo(0, document.body.scrollHeight); 
-        
-
-        
-    })
+    hiddenClass2.classList.remove(`hidden2`)
+    let checkboxes = document.querySelectorAll(".checkbox")
+    let choices = [];
+    checkboxes.forEach(element => {
+        console.log(element)
+        const elID = element.getAttribute('id')
+        if(element.checked) {
+            choices = [...choices, JSON.parse(elID)]
+        } 
+    });    
+    axios.post('http://localhost:4004/choices', {choices}).then((res) => {
+        const data = res.data.choices;
+        data.forEach(restaurant => {
+            createRowChoices(restaurant);
+        });
+    }).catch((err) => {
+        console.error(err);
+    })      
 }
 
 function createRowChoices(choice) {
-
     let tbody = document.querySelector(`#t-body-choices`)
-
     let newRow = tbody.insertRow(); 
 
     let nameCell = newRow.insertCell();
@@ -155,61 +127,58 @@ function createRowChoices(choice) {
     newRow.remove()
     })
     
-
     deleteBtnCell.appendChild(deleteBtn)
-
     window.scrollTo(0, document.body.scrollHeight); 
 
 }
 
-const createBusUI = (businesses) => {
-
-    hiddenClass1.classList.remove(`hidden1`);
-
-    businesses.forEach((business) => {
-        createRow(business)
-
-    })
-
-    window.scrollTo(0, 1000); 
-}
-
-const addRest = () => {
-        hiddenClass2.classList.remove(`hidden2`)
-        
-        let checkboxes = document.querySelectorAll(".checkbox")
-
-        let choices = [];
-        console.log({checkboxes})
-        checkboxes.forEach(element => {
-            console.log(element)
-            const elID = element.getAttribute('id')
-        
-            if(element.checked) {
-                choices = [...choices, JSON.parse(elID)]
-            } 
-        });    
-        axios.post('http://localhost:4004/choices', {choices}).then((res) => {
-            const data = res.data.choices;
-            data.forEach(restaurant => {
-                createRowChoices(restaurant);
-            });
-        }).catch((err) => {
-            console.error(err);
-        })      
-
-}
-    
-const getRestaurants = (e) => {
-    e.preventDefault()
-    let zipCode = document.querySelector("#zipCode").value
-    let limit = document.querySelector("#limit").value
-    axios.get(`http://localhost:4004/locations/${zipCode}/${limit}`)
+function getRandomRest (choice){
+    axios.get(`http://localhost:4004/choices`)
         .then((response) => {
-            createBusUI(response.data.businesses)
-        })
-        .catch((err) => {console.log(err)})
-    }
+        let choicesArr = response.data.DB
+        let arrLength = choicesArr.length
+        let randomChoice_index = Math.floor(Math.random() * (arrLength))
+        let finalChoice = choicesArr[randomChoice_index]
+
+        createFinalCard(finalChoice)
+
+        hiddenClass2.classList.add(`hidden2`)
+        hiddenClass3.classList.remove(`hidden3`)
+        displayDiv.scrollIntoView(true); 
+        
+    })
+}
+
+function createFinalCard(restaurant) {
+    const finalCard = document.createElement('div')
+    finalCard.classList.add('final-card')
+    finalCard.innerHTML = `
+    <br>
+    <h1 class="header">${restaurant.name}</h1>
+    
+    <br>
+    <img alt='restaurant image' src=${restaurant.image_url} class="restaurant-image"/>
+    
+    <br>
+    <h4>Phone Number: </h4>
+    <p class="phone">${restaurant.phone}</p>
+    
+    <br>
+    <h4>Address: </h4>
+    <p class="address"> ${restaurant.location.address1}, 
+    <br>${restaurant.location.city}, ${restaurant.location.state}, ${restaurant.location.zip_code} </p>
+    
+    <br>
+    <h4>Type of transactions: </h4>
+    <p>${restaurant.transactions[0]}, ${restaurant.transactions[1]}</p>
+    
+    <br>
+    <h4>Website on Yelp: </h4>
+    <p class="url"><a href="${restaurant.url}">${restaurant.name}</a></p>
+    <br>
+    `
+    displayDiv.appendChild(finalCard)
+}
 
 function sortTableByColumn(table, column, asc = true) {
     const dirModifier = asc ? 1 : -1; 
@@ -259,7 +228,6 @@ function sortTableByColumn(table, column, asc = true) {
     table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc")); 
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc)
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc)
-
     }
 
 document.querySelectorAll(".table-sortable th").forEach(headerCell => {
@@ -272,16 +240,9 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
     })
 })
 
+getStartedBtn.addEventListener("click", getStarted); 
 sortTableByColumn(document.querySelector("table"), 0); 
-sortTableByColumn(document.querySelector("table"), 1); 
-sortTableByColumn(document.querySelector("table"), 2); 
-sortTableByColumn(document.querySelector("table"), 3); 
-sortTableByColumn(document.querySelector("table"), 4); 
-
-
-
-
-locForm.addEventListener("submit", getRestaurants)
-addChoiceBtn.addEventListener("click", addRest)
-travisChooseBtn.addEventListener("click", getRandomRest)
+locForm.addEventListener("submit", getRestaurants);
+addChoiceBtn.addEventListener("click", addRest);
+travisChooseBtn.addEventListener("click", getRandomRest); 
 

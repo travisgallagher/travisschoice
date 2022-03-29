@@ -38,10 +38,13 @@
                 <li class="info-ol">Select the restaurants you want added to your list of possible meal choices</li>
                 <li class="info-ol">Push the "Travis Pick" button, and I will select which restaurant you eat at!</li>
             </ol>
+
+
+            <button class="button" id="get-started">Get Started!</button>
         </div>
     </section>
 
-    <section class="form-sec">
+    <section class="hidden4 form-sec">
         <form class="info" id="locationForm">
             <label class="header" id="form-header" for="form">Enter your information</label>
             <div class="text">
@@ -73,46 +76,6 @@
                 </thead>
 
                 <tbody id="t-body">
-<!-- 
-                    <tr>
-                        <td>test</td>
-                        <td>dddd</td>
-                        <td>$</td>
-                        <td>4.5</td>
-                        <td> 
-                            <input type="checkbox" value="test" class="checkbox">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>another test</td>
-                        <td>ccccc</td>
-                        <td>$$</td>
-                        <td>3</td>
-                        <td> 
-                            <input type="checkbox" value="anotherTest" class="checkbox">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>yet another test</td>
-                        <td>aaaaa</td>
-                        <td>$$$</td>
-                        <td>2</td>
-                        <td> 
-                            <input type="checkbox" value="yetAnotherTest" class="checkbox">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>dummy test</td>
-                        <td>bbbbb</td>
-                        <td>$</td>
-                        <td>5</td>
-                        <td> 
-                            <input type="checkbox" value="dummyTest" class="checkbox">
-                        </td>
-                    </tr> -->
 
                 </tbody>
                 
@@ -126,7 +89,7 @@
     <section class="hidden2" id="results">
         
         <div class="info">
-            <h1 class="header">Your choices</h1>
+            <h1 class="header">Your Choices</h1>
             <br>
             <table class="table table-sortable" id="restTable" style="width:80%">
                 <thead>
@@ -146,7 +109,7 @@
                 
             </table>
             <br>          
-            <button  class="button" id="travisBtn">Travis choose my meal!</button>
+            <button  class="button" id="travisBtn">Travis Choose!</button>
         </div>
     </section>
 
@@ -156,8 +119,8 @@
 
 
 
-
         </div>
+        <h4 class="header"><a href="./">Go Home</a></h4>
     </section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
