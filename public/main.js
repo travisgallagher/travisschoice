@@ -1,6 +1,8 @@
 
 const locForm = document.querySelector("#locationForm")
-const hiddenClass = document.querySelector(".hidden")
+const hiddenClass1 = document.querySelector(".hidden1")
+const hiddenClass2 = document.querySelector(".hidden2")
+const hiddenClass3 = document.querySelector(".hidden3")
 const restCheck = document.querySelector("#checkbox")
 let restTable = document.querySelector("#restTable")
 let nameCol = document.querySelector("#name-col")
@@ -11,9 +13,12 @@ let results = document.querySelector("#results")
 let addChoiceBtn = document.querySelector("#add-choices")
 
 let travisChooseBtn = document.querySelector("#travisBtn")
+let displayFinal = document.querySelector("#display-final")
+let displayDiv = document.getElementById("final-div")
 
 
 function createRow(business) {
+
     let tbody = document.querySelector(`#t-body`)
 
     let newRow = tbody.insertRow(); 
@@ -49,6 +54,45 @@ function createRow(business) {
 }
 
 
+
+
+function createFinalCard(restaurant) {
+    const finalCard = document.createElement('div')
+
+    finalCard.classList.add('final-card')
+
+    finalCard.innerHTML = `
+    <br>
+    <h1 class="header">${restaurant.name}</h1>
+    
+    <br>
+    <img alt='restaurant image' src=${restaurant.image_url} class="restaurant-image"/>
+    
+    <br>
+    <h4>Phone Number: </h4>
+    <p class="phone">${restaurant.phone}</p>
+    
+    <br>
+    <h4>Address: </h4>
+    <p class="address"> ${restaurant.location.address1}, 
+    <br>${restaurant.location.city}, ${restaurant.location.state}, ${restaurant.location.zip_code} </p>
+    
+    <br>
+    <h4>Type of transactions: </h4>
+    <p>${restaurant.transactions[0]}, ${restaurant.transactions[1]}</p>
+    
+    <br>
+    <h4>Website: </h4>
+    <p class="url"><a href="${restaurant.url}">${restaurant.name}</a></p>
+    <br>
+    `
+
+
+    displayDiv.appendChild(finalCard)
+    window.scrollTo(0, document.body.scrollHeight); 
+}
+
+
 function getRandomRest (choice){
     // 1. get the choices from backend
     // 2. randomize them
@@ -64,12 +108,18 @@ function getRandomRest (choice){
         let randomChoice_index = Math.floor(Math.random() * (arrLength))
         let finalChoice = choicesArr[randomChoice_index]
         console.log(finalChoice) 
+
+        createFinalCard(finalChoice)
+        hiddenClass3.classList.remove(`hidden3`)
+        window.scrollTo(0, document.body.scrollHeight); 
         
+
         
     })
 }
 
 function createRowChoices(choice) {
+
     let tbody = document.querySelector(`#t-body-choices`)
 
     let newRow = tbody.insertRow(); 
@@ -80,8 +130,6 @@ function createRowChoices(choice) {
     
     let descCell = newRow.insertCell();
     for (let i = 0; i < choice.categories.length; i++) {
-        
-        
         let descText = document.createTextNode(`${choice.categories[i].title} `)
         descCell.appendChild(descText)
     }
@@ -110,12 +158,14 @@ function createRowChoices(choice) {
     
 
     deleteBtnCell.appendChild(deleteBtn)
-    // deleteBtn.onclick((e) => e.remove())
+
+    window.scrollTo(0, document.body.scrollHeight); 
+
 }
 
 const createBusUI = (businesses) => {
 
-    hiddenClass.classList.remove(`hidden`);
+    hiddenClass1.classList.remove(`hidden1`);
 
     businesses.forEach((business) => {
         createRow(business)
@@ -126,7 +176,10 @@ const createBusUI = (businesses) => {
 }
 
 const addRest = () => {
+        hiddenClass2.classList.remove(`hidden2`)
+        
         let checkboxes = document.querySelectorAll(".checkbox")
+
         let choices = [];
         console.log({checkboxes})
         checkboxes.forEach(element => {
@@ -145,6 +198,7 @@ const addRest = () => {
         }).catch((err) => {
             console.error(err);
         })      
+
 }
     
 const getRestaurants = (e) => {
