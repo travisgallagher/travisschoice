@@ -8,17 +8,9 @@ app.use(express.json());
 app.use(cors());
 
 
-// const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-//const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
-//const serviceAccount = require('./path/to/serviceAccountKey.json');
-// const db = initializeApp({
-    //     credential: applicationDefault(),
-    //     databaseURL: 'https://traviss-choice.firebaseio.com'
-    // });
-
 const { getLocations, saveChoices, getChoices, deleteChoice } = require('./controller.js')
 
-// Serving up static public 
+// Static Endpoints
 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public"))
@@ -40,11 +32,9 @@ app.get("/login", function(req, res) {
     res.sendFile(path.join(path.join(__dirname, "../public/login.html")))
 })
 
-
 app.get("/signup", function(req, res) {
     res.sendFile(path.join(path.join(__dirname, "../public/signup.html")))
 })
-
 
 app.get("/contact", function(req, res) {
     res.sendFile(path.join(path.join(__dirname, "../public/contact.html")))
@@ -57,13 +47,8 @@ app.delete("/choices/:id", deleteChoice)
 app.post("/choices", saveChoices)
 app.get("/locations/:zipCode/:limit", getLocations)
 
-
-
 const port = process.env.PORT || 4004; 
 
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
 }); 
-// app.listen(process.env.SERVER_PORT, () => {
-//     console.log(`server running on port ${process.env.SERVER_PORT}`)
-// })

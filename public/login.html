@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles">
     <title>Travis's Choice Home</title>
 </head>
+
 <body>
     <header class="header-nav">          
         <ul class="nav">
@@ -16,42 +17,44 @@
             <li class="nav-li"><a href="./contact">Contact</a></li>
         </ul>
     </header>
-<br>
-<h1>Log In</h1>
-<br>
-<section>
-    <form class="info" id="login-form">
-        <div class="text">
-        <h1 class="header" for="user-name"><b>Username:</b></h1>
-            <br>
-            <input class="loginTxt" type="text" placeholder="Enter Username" name="user-name" required>
-            <br>
-            <br>
-        <h1 class="header" for="password"><b>Password:</b></h1>
-        <br>
-            <input class="loginTxt" type="password" placeholder="Enter Password" name="password" required>
-            <br>
-            <br>
-            <span class="psw"> <a class="pwd" href="./">Forgot password?</a></span>
-        <br><br>
-        <button class="button" type="submit">Login</button>
-        <br>
-        <label>
-            <input class="psw" type="checkbox" checked="checked" name="remember"> Remember me </label>
-        </label>
-        <br>
-        <br>
-        <h5>Don't have an account? <a href="./signup">Sign-up here!</a> </h5>
-    </div>
-    </form>
-</section>
-<footer>
-    <img id="logo" src="https://lh3.googleusercontent.com/d1DdPZBl1nV6e90IrxjzZ7GV-BTXerPoKimZncH0jxSSO5WPz7eZDnHc1zODTmaX7cvkHXAccplegBJW0aSoNESHX-SmLYGtEoMNGnYedcflHwLMmPshNc56ZCsJN_RvDNqTlp4now=s200-p-k" alt="Travis's Logo">
-</footer>
 
+    <br>
+    <h1>Log In</h1>
+    <br>
 
+    <section>
+        <form class="info" id="login-form">
+            <div class="text">
+            <h1 class="header" for="user-name"><b>Username:</b></h1>
+                <br>
+                <input class="loginTxt" type="text" placeholder="Enter Username" name="user-name" required>
+                <br>
+                <br>
+            <h1 class="header" for="password"><b>Password:</b></h1>
+            <br>
+                <input class="loginTxt" type="password" placeholder="Enter Password" name="password" required>
+                <br>
+                <br>
+                <span class="psw"> <a class="pwd" href="./">Forgot password?</a></span>
+            <br><br>
+            <button class="button" type="submit" onclick="redirectHome()">Login</button>
+            <br>
+            <label>
+                <input class="psw" type="checkbox" checked="checked" name="remember"> Remember me </label>
+            </label>
+            <br>
+            <br>
+            <h5>Don't have an account? <a href="./signup">Sign-up here!</a> </h5>
+        </div>
+        </form>
+    </section>
+
+    <footer>
+        <img id="logo" src="https://lh3.googleusercontent.com/d1DdPZBl1nV6e90IrxjzZ7GV-BTXerPoKimZncH0jxSSO5WPz7eZDnHc1zODTmaX7cvkHXAccplegBJW0aSoNESHX-SmLYGtEoMNGnYedcflHwLMmPshNc56ZCsJN_RvDNqTlp4now=s200-p-k" alt="Travis's Logo">
+    </footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js"></script>
+
 </body>
 </html>

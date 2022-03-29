@@ -10,6 +10,7 @@ let displayDiv = document.getElementById("final-div")
 let getStartedBtn = document.getElementById("get-started")
 let submitMessage = document.querySelector("#contact-form")
 let homeBtn = document.querySelector("#home-button")
+let logo = document.querySelector("#logo")
 
 const getStarted = (e) => {
     hiddenClass4.classList.remove(`hidden4`)
@@ -218,15 +219,12 @@ function sortTableByColumn(table, column, asc = true) {
     })
     }
 
-    // Remove all existing TRs from the table
     while(tBody.firstChild) {
         tBody.removeChild(tBody.firstChild); 
     }
 
-    // Re-add the newly sorted rows
     tBody.append(...sortedRows); 
 
-    // Remember how the column is currently sorted
     table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc")); 
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc)
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc)
@@ -257,11 +255,10 @@ function redirectHome(e) {
     location.href = "./"
 }
 
+logo.addEventListener("click", redirectHome)
 getStartedBtn.addEventListener("click", getStarted); 
 sortTableByColumn(document.querySelector("table"), 0); 
 locForm.addEventListener("submit", getRestaurants);
 addChoiceBtn.addEventListener("click", addRest);
 travisChooseBtn.addEventListener("click", getRandomRest); 
 homeBtn.addEventListener("click", redirectHome)
-//submitMessage.addEventListener("submit", handleSubmit); 
-

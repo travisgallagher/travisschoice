@@ -7,7 +7,6 @@ function getLocations(req, res) {
         authenticatedAxios.get(`/search?location=${zipCode}&limit=${limit}&category=food`)
         .then((response) => {
             res.send(response.data)
-            console.log(response.data)
         })
         .catch(err => console.log(err))
 }

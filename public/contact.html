@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles">
     <title>Travis's Choice Home</title>
 </head>
+
 <body>
     <header class="header-nav">          
         <ul class="nav">
@@ -16,62 +17,60 @@
             <li class="nav-li"><a href="./contact">Contact</a></li>
         </ul>
     </header>
-<br>
-<h1>Contact Travis</h1>
-<br>
 
-<section class="intro-sec">
-    <div class="info">
-        <h1 class="header"">Who is Travis?</h4>
+    <br>
+    <h1>Contact Travis</h1>
+    <br>
 
-        <p class="text">  <br>
-                I am a current student at Devmountain, who created Travis's Choice as his first project! <br>
-                I also work as a Critical Care Technician in the Cardiac ICU at Intermountain Medical Center. <br>
-                Me and my wife can never decide where to eat at. <br>
-                I came up with the idea, after all of the nurses I work with also couldn't decide on what to eat for lunch. <br><br>
-                My solution: create a website that chooses where you eat for you! <br>
-                Thank you Cardiac ICU nurses for helping me with this idea, you're the best! <br>
+    <section class="intro-sec">
+        <div class="info">
+            <h1 class="header"">Who is Travis?</h4>
+            <p class="text">  <br>
+                    I am a current student at Devmountain, who created Travis's Choice as his first project! <br>
+                    I also work as a Critical Care Technician in the Cardiac ICU at Intermountain Medical Center. <br>
+                    Me and my wife can never decide where to eat at. <br>
+                    I came up with the idea, after all of the nurses I work with also couldn't decide on what to eat for lunch. <br><br>
+                    My solution: create a website that chooses where you eat for you! <br>
+                    Thank you Cardiac ICU nurses for helping me with this idea, you're the best! <br>
+                <br>
+                </p>
             <br>
-            </p>
-        <br>
-        <img class="text" id="travis-pic" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/271279424_2987524304896454_1814895188505658835_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Jel0zSXmQVEAX_RK3jP&_nc_ht=scontent-sjc3-1.xx&oh=00_AT8TZk_KjTPAzEWcleZ6Mqw8LW_jfvcoWtfaqMe_Rh6blA&oe=6247CEA9"
-        alt="picture of Travis">
-        <br>
-    </div>
-</section>
-
-
-
-<section class="form-sec">
-    <form class="info" id="contact-form">
-        <h1 class="header" id="form-header" for="form">Enter your information</h1>
-        <div class="text">
-            <label class="childFormLabel for="fname">First Name:</label>
-                <input class="loginTxt" required type="text" name="fname" id="fname" placeholder="first name...">
-                <br>
-                <br>
-            <label class="childFormLabel for="lname"/>Last Name: </label>
-                <input class="loginTxt" required type="text" name="lname" id="lname" placeholder="last name..." >
-                <br>
-                <br>
-            <label class="childFormLabel for="email"/>Email Address: </label>
-                <input class="loginTxt" required type="text" name="email" id="email" placeholder="anyemail@gmail.com" >
-                <br>
-                <br>
-            <label class="childFormLabel message" for="message">Please enter your message:</label>
-            <br>
-            <br>  
-            <input class="loginTxt" type="childForm" required type="text" name="message" id="message" placeholder="I love Travis's Choice!">
-            <br>
+            <img class="text" id="travis-pic" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/271279424_2987524304896454_1814895188505658835_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Jel0zSXmQVEAX_RK3jP&_nc_ht=scontent-sjc3-1.xx&oh=00_AT8TZk_KjTPAzEWcleZ6Mqw8LW_jfvcoWtfaqMe_Rh6blA&oe=6247CEA9"
+            alt="picture of Travis">
             <br>
         </div>
-        <button  class="button" id="submit-message" >Submit Message</button>
-    </form>
-</section>
+    </section>
 
-<footer>
-    <img id="logo" src="https://lh3.googleusercontent.com/d1DdPZBl1nV6e90IrxjzZ7GV-BTXerPoKimZncH0jxSSO5WPz7eZDnHc1zODTmaX7cvkHXAccplegBJW0aSoNESHX-SmLYGtEoMNGnYedcflHwLMmPshNc56ZCsJN_RvDNqTlp4now=s200-p-k" alt="Travis's Logo">
-</footer>
+    <section class="form-sec">
+        <form class="info" id="contact-form">
+            <h1 class="header" id="form-header" for="form">Enter your information</h1>
+            <div class="text">
+                <label class="childFormLabel for="fname">First Name:</label>
+                    <input class="loginTxt" required type="text" name="fname" id="fname" placeholder="first name...">
+                    <br>
+                    <br>
+                <label class="childFormLabel for="lname"/>Last Name: </label>
+                    <input class="loginTxt" required type="text" name="lname" id="lname" placeholder="last name..." >
+                    <br>
+                    <br>
+                <label class="childFormLabel for="email"/>Email Address: </label>
+                    <input class="loginTxt" required type="text" name="email" id="email" placeholder="anyemail@gmail.com" >
+                    <br>
+                    <br>
+                <label class="childFormLabel message" for="message">Please enter your message:</label>
+                <br>
+                <br>  
+                <input class="loginTxt" type="childForm" required type="text" name="message" id="message" placeholder="I love Travis's Choice!">
+                <br>
+                <br>
+            </div>
+            <button  class="button" id="submit-message" onclick="redirectHome()">Submit Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <img id="logo" src="https://lh3.googleusercontent.com/d1DdPZBl1nV6e90IrxjzZ7GV-BTXerPoKimZncH0jxSSO5WPz7eZDnHc1zODTmaX7cvkHXAccplegBJW0aSoNESHX-SmLYGtEoMNGnYedcflHwLMmPshNc56ZCsJN_RvDNqTlp4now=s200-p-k" alt="Travis's Logo">
+    </footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js"></script>
