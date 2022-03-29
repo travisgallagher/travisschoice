@@ -58,6 +58,12 @@ app.post("/choices", saveChoices)
 app.get("/locations/:zipCode/:limit", getLocations)
 
 
-app.listen(process.env.SERVER_PORT, () => {
-    console.log(`server running on port ${process.env.SERVER_PORT}`)
-})
+
+const port = process.env.PORT || 4004; 
+
+app.listen(port, () => {
+    console.log(`Server is running on ${port}`);
+}); 
+// app.listen(process.env.SERVER_PORT, () => {
+//     console.log(`server running on port ${process.env.SERVER_PORT}`)
+// })
