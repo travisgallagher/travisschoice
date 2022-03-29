@@ -18,7 +18,7 @@ const getRestaurants = (e) => {
     e.preventDefault()
     let zipCode = document.querySelector("#zipCode").value
     let limit = document.querySelector("#limit").value
-    axios.get(`http://localhost:4004/locations/${zipCode}/${limit}`)
+    axios.get(`/locations/${zipCode}/${limit}`)
         .then((response) => {
             createBusUI(response.data.businesses)
         })
@@ -81,7 +81,7 @@ const addRest = () => {
             choices = [...choices, JSON.parse(elID)]
         } 
     });    
-    axios.post('http://localhost:4004/choices', {choices}).then((res) => {
+    axios.post('/choices', {choices}).then((res) => {
         const data = res.data.choices;
         data.forEach(restaurant => {
             createRowChoices(restaurant);
@@ -120,7 +120,7 @@ function createRowChoices(choice) {
     deleteBtn.classList.add("button-delete")
     deleteBtn.id = JSON.stringify(choice.id)
     deleteBtn.addEventListener("click", () => {
-        axios.delete(`http://localhost:4004/choices/${choice.id}`).then((res) => {
+        axios.delete(`/choices/${choice.id}`).then((res) => {
         }).catch((err) => {
             console.error(err);
         }) 
@@ -133,7 +133,7 @@ function createRowChoices(choice) {
 }
 
 function getRandomRest (choice){
-    axios.get(`http://localhost:4004/choices`)
+    axios.get(`/choices`)
         .then((response) => {
         let choicesArr = response.data.DB
         let arrLength = choicesArr.length

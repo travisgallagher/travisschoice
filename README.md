@@ -1,6 +1,6 @@
 Travis's Choice
 
-Deployed on Heroku: 
+Deployed on Heroku: https://traviss-choice.herokuapp.com/
 
 Developer's Linkedin: https://www.linkedin.com/in/travis-gallagher-37509116b/
 
@@ -11,7 +11,7 @@ Screenshots:
 technologyies:
     front-end
     backend
-    
+
 
 
 
