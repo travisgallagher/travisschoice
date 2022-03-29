@@ -9,8 +9,6 @@ let travisChooseBtn = document.querySelector("#travisBtn")
 let displayDiv = document.getElementById("final-div")
 let getStartedBtn = document.getElementById("get-started")
 
-const baseURL = "https://traviss-choice.herokuapp.com"
-
 const getStarted = (e) => {
     hiddenClass4.classList.remove(`hidden4`)
     introSection.classList.add(`hidden5`)
@@ -20,7 +18,7 @@ const getRestaurants = (e) => {
     e.preventDefault()
     let zipCode = document.querySelector("#zipCode").value
     let limit = document.querySelector("#limit").value
-    axios.get(`${baseURL}/locations/${zipCode}/${limit}`)
+    axios.get(`http://localhost:4004/locations/${zipCode}/${limit}`)
         .then((response) => {
             createBusUI(response.data.businesses)
         })
@@ -83,7 +81,7 @@ const addRest = () => {
             choices = [...choices, JSON.parse(elID)]
         } 
     });    
-    axios.post('${baseURL}/choices', {choices}).then((res) => {
+    axios.post('http://localhost:4004/choices', {choices}).then((res) => {
         const data = res.data.choices;
         data.forEach(restaurant => {
             createRowChoices(restaurant);
@@ -122,7 +120,7 @@ function createRowChoices(choice) {
     deleteBtn.classList.add("button-delete")
     deleteBtn.id = JSON.stringify(choice.id)
     deleteBtn.addEventListener("click", () => {
-        axios.delete(`${baseURL}/choices/${choice.id}`).then((res) => {
+        axios.delete(`http://localhost:4004/choices/${choice.id}`).then((res) => {
         }).catch((err) => {
             console.error(err);
         }) 
@@ -135,7 +133,7 @@ function createRowChoices(choice) {
 }
 
 function getRandomRest (choice){
-    axios.get(`${baseURL}/choices`)
+    axios.get(`http://localhost:4004/choices`)
         .then((response) => {
         let choicesArr = response.data.DB
         let arrLength = choicesArr.length
