@@ -263,5 +263,5 @@ locForm.addEventListener("submit", getRestaurants);
 addChoiceBtn.addEventListener("click", addRest);
 travisChooseBtn.addEventListener("click", getRandomRest); 
 homeBtn.addEventListener("click", redirectHome)
-submitMessage.addEventListener("submit", handleSubmit); 
+//submitMessage.addEventListener("submit", handleSubmit); 
 
