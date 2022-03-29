@@ -335,24 +335,19 @@ table.table th {
     vertical-align: text-top;
 }
 
-footer{
+footer {
+    width: 100%;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
+    align-items: center;
     justify-content: center;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px; 
-    background-color: #979DA6;
-    width: auto;
-    margin: 10px;
 }
-
-
 #logo{
     border-radius: 15px;
-    max-width: 200px;
-    max-height: 200px;
-
+    
 }
 
 /* Color Theme*/
