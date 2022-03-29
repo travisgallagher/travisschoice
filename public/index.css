@@ -257,6 +257,16 @@ table.table th {
     border-top-right-radius: 15px;
 }
 
+#homeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    align-self: center;
+}
+
 
 /* Login css */
 

@@ -8,6 +8,8 @@ let addChoiceBtn = document.querySelector("#add-choices")
 let travisChooseBtn = document.querySelector("#travisBtn")
 let displayDiv = document.getElementById("final-div")
 let getStartedBtn = document.getElementById("get-started")
+let submitMessage = document.querySelector("#contact-form")
+let homeBtn = document.querySelector("#home-button")
 
 const getStarted = (e) => {
     hiddenClass4.classList.remove(`hidden4`)
@@ -240,9 +242,26 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
     })
 })
 
+function handleSubmit (e) {
+    e.preventDefault(); 
+
+    window.alert("Submitted Successfully! Thank you for the feedback!")
+    const inputs = document.querySelectorAll(".loginTxt")
+    
+    inputs.forEach(input => {
+        input.value = ""; 
+    }); 
+}; 
+
+function redirectHome(e) {
+    location.href = "./"
+}
+
 getStartedBtn.addEventListener("click", getStarted); 
 sortTableByColumn(document.querySelector("table"), 0); 
 locForm.addEventListener("submit", getRestaurants);
 addChoiceBtn.addEventListener("click", addRest);
 travisChooseBtn.addEventListener("click", getRandomRest); 
+homeBtn.addEventListener("click", redirectHome)
+submitMessage.addEventListener("submit", handleSubmit); 
 
