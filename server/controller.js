@@ -1,4 +1,5 @@
 const authenticatedAxios = require(`./axiosConfig.js`)
+let DB = [];
 
 function getLocations(req, res) {
     
@@ -13,6 +14,25 @@ function getLocations(req, res) {
         .catch(err => console.log(err))
 }
 
+function saveChoices(req, res) {
+    // 1. store data
+    DB = req.body.choices;
+    res.send(req.body);
+}
+
+function getChoices(req, res) {
+    res.send({status:200, DB});
+}
+function deleteChoice(req, res) {
+    const {id} = req.params
+    const updatedChoices = DB.filter((c) => c.id !== id);
+    DB = updatedChoices;
+    res.send({status:200, updatedChoices});
+}
+
 module.exports = {
-    getLocations
+    getLocations,
+    saveChoices,
+    getChoices,
+    deleteChoice
 }

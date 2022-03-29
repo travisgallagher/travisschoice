@@ -10,14 +10,14 @@ let tableHeader = document.querySelector("th")
 let results = document.querySelector("#results")
 let addChoiceBtn = document.querySelector("#add-choices")
 
+let travisChooseBtn = document.querySelector("#travisBtn")
 
-
-let choices = []
 
 function createRow(business) {
     let tbody = document.querySelector(`#t-body`)
 
     let newRow = tbody.insertRow(); 
+
     let nameCell = newRow.insertCell();
     let nameText = document.createTextNode(`${business.name}`)
     nameCell.appendChild(nameText)
@@ -48,6 +48,71 @@ function createRow(business) {
     checkBoxCell.appendChild(cb);
 }
 
+
+function getRandomRest (choice){
+    // 1. get the choices from backend
+    // 2. randomize them
+    // 3. do something with the one you get back 
+    
+    console.log("function getting hit")
+    axios.get(`http://localhost:4004/choices`)
+        .then((response) => {
+            console.log(response)
+        let choicesArr = response.data.DB
+        console.log(choicesArr)
+        let arrLength = choicesArr.length
+        let randomChoice_index = Math.floor(Math.random() * (arrLength))
+        let finalChoice = choicesArr[randomChoice_index]
+        console.log(finalChoice) 
+        
+        
+    })
+}
+
+function createRowChoices(choice) {
+    let tbody = document.querySelector(`#t-body-choices`)
+
+    let newRow = tbody.insertRow(); 
+
+    let nameCell = newRow.insertCell();
+    let nameText = document.createTextNode(`${choice.name}`)
+    nameCell.appendChild(nameText)
+    
+    let descCell = newRow.insertCell();
+    for (let i = 0; i < choice.categories.length; i++) {
+        
+        
+        let descText = document.createTextNode(`${choice.categories[i].title} `)
+        descCell.appendChild(descText)
+    }
+    
+    let priceCell = newRow.insertCell();
+    let priceText = document.createTextNode(`${choice.price}`)
+    priceCell.appendChild(priceText)
+    
+    let ratingCell = newRow.insertCell();
+    let ratingText = document.createTextNode(`${choice.rating}`)
+    ratingCell.appendChild(ratingText)
+    
+    let deleteBtnCell = newRow.insertCell();
+    let deleteBtn = document.createElement(`button`)
+    deleteBtn.innerText = "Delete"
+    deleteBtn.classList.add("button")
+    deleteBtn.classList.add("button-delete")
+    deleteBtn.id = JSON.stringify(choice.id)
+    deleteBtn.addEventListener("click", () => {
+        axios.delete(`http://localhost:4004/choices/${choice.id}`).then((res) => {
+        }).catch((err) => {
+            console.error(err);
+        }) 
+    newRow.remove()
+    })
+    
+
+    deleteBtnCell.appendChild(deleteBtn)
+    // deleteBtn.onclick((e) => e.remove())
+}
+
 const createBusUI = (businesses) => {
 
     hiddenClass.classList.remove(`hidden`);
@@ -62,16 +127,24 @@ const createBusUI = (businesses) => {
 
 const addRest = () => {
         let checkboxes = document.querySelectorAll(".checkbox")
+        let choices = [];
         console.log({checkboxes})
         checkboxes.forEach(element => {
             console.log(element)
             const elID = element.getAttribute('id')
-            console.log(JSON.parse(elID))
-
+        
             if(element.checked) {
-                choices.push(JSON.parse(elID))
+                choices = [...choices, JSON.parse(elID)]
             } 
-        });        
+        });    
+        axios.post('http://localhost:4004/choices', {choices}).then((res) => {
+            const data = res.data.choices;
+            data.forEach(restaurant => {
+                createRowChoices(restaurant);
+            });
+        }).catch((err) => {
+            console.error(err);
+        })      
 }
     
 const getRestaurants = (e) => {
@@ -155,8 +228,7 @@ sortTableByColumn(document.querySelector("table"), 4);
 
 
 
-
 locForm.addEventListener("submit", getRestaurants)
 addChoiceBtn.addEventListener("click", addRest)
-
+travisChooseBtn.addEventListener("click", getRandomRest)
 

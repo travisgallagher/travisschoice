@@ -16,7 +16,7 @@ app.use(cors());
     //     databaseURL: 'https://traviss-choice.firebaseio.com'
     // });
 
-const { getLocations } = require('./controller.js')
+const { getLocations, saveChoices, getChoices, deleteChoice } = require('./controller.js')
 
 // Serving up static public 
 
@@ -54,8 +54,11 @@ app.get("/contact", function(req, res) {
 
 // Actual Endpoints
 
-app.get("/locations/:zipCode/:limit", getLocations)
 
+app.get("/choices", getChoices)
+app.delete("/choices/:id", deleteChoice)
+app.post("/choices", saveChoices)
+app.get("/locations/:zipCode/:limit", getLocations)
 
 
 app.listen(process.env.SERVER_PORT, () => {

@@ -123,13 +123,41 @@
         </div>
     </section>
 
-    <section id="results">
-        <h1>Your choices</h1>
-    
+    <section class="hidden" id="results">
+        
+        <div class="info">
+            <h1>Your choices</h1>
 
+            <table class="table table-sortable" id="restTable" style="width:80%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Verify Choice</th>
+                    </tr>
+                </thead>
 
-        <button  class="button" id="travisBtn">Travis choose my meal!</button>
-    </section>      
+                <tbody id="t-body-choices">
+            
+
+                </tbody>
+                
+            </table>
+            <button class="button" id="add-option">Add your own restaurant to the mix!</button>
+            <br>
+            <br>
+            
+            <button  class="button" id="travisBtn">Travis choose my meal!</button>
+        </div>
+    </section>
+
+    <section class="hidden">
+        <div id="final-result">
+
+        </div>
+    </section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js"></script>
