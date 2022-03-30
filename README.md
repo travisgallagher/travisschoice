@@ -54,13 +54,15 @@ Project Wireframe's:
 
 Screenshots:
 <br>
-<img width="1512" alt="Screen Shot 2022-03-29 at 5 16 47 PM" src="https://user-images.githubusercontent.com/92351358/160722847-fee7a211-64bc-4e6f-8636-794fc4bb934f.png">
+<img width="757" alt="Screen Shot 2022-03-29 at 11 23 59 PM" src="https://user-images.githubusercontent.com/92351358/160757399-26c83c37-f5f4-426c-924b-3d0c775e03b5.png">
 <br>
-<img width="1509" alt="Screen Shot 2022-03-29 at 5 17 59 PM" src="https://user-images.githubusercontent.com/92351358/160722846-334fdf11-4b03-4b61-9410-8cb010a12af4.png">
+<img width="757" alt="Screen Shot 2022-03-29 at 11 24 11 PM" src="https://user-images.githubusercontent.com/92351358/160757397-b78c27b0-f574-4417-873b-f3ad7ce31c9b.png">
 <br>
-<img width="1510" alt="Screen Shot 2022-03-29 at 5 19 31 PM" src="https://user-images.githubusercontent.com/92351358/160722842-b0e30225-0b62-4203-9265-6e7696765b71.png">
+<img width="1508" alt="Screen Shot 2022-03-29 at 11 24 58 PM" src="https://user-images.githubusercontent.com/92351358/160757394-e2c6dd4d-64c2-4678-adf9-024abbd63ffc.png">
 <br>
-<img width="1500" alt="Screen Shot 2022-03-29 at 5 19 51 PM" src="https://user-images.githubusercontent.com/92351358/160722832-732b9a86-79f2-486a-88f9-0a7346ac99ee.png">
+<img width="757" alt="Screen Shot 2022-03-29 at 11 25 19 PM" src="https://user-images.githubusercontent.com/92351358/160757392-39bf8cb5-0b8b-40ad-bb01-9a23ae1d06ff.png">
+<br>
+<img width="1510" alt="Screen Shot 2022-03-29 at 11 25 30 PM" src="https://user-images.githubusercontent.com/92351358/160757387-0777a43f-9e42-4438-8ba0-991fc0ef973e.png">
 <br>
 
 Website Flow:

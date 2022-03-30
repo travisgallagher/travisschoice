@@ -21,14 +21,14 @@
 li a {
     display: block;
     background-color: #0D0D0D;
-    color:#F2F2F2;
+    color:aqua;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #636A73;
+    background-color: darkblue;
 }
 
 h1 {
@@ -43,8 +43,8 @@ h1 {
     margin-right: auto;
     text-align: center;
     width: 60%;
-    color: #F2F2F2;
-    background-color: #0D0D0D;
+    color: lightblue; 
+    background-color: black;
 }
 
 .header{
@@ -60,7 +60,7 @@ h1 {
     margin-right: auto;
     text-align: center;
     width: 60%;
-    color: #0D0D0D;
+    color: aqua;
     background-color: #979DA6;
 }
 
@@ -70,7 +70,7 @@ h1 {
     padding: 20px;
     margin: 10px;
     background-color: #979DA6 ;
-    color: #0D0D0D;
+    color: black;
 }
 
 section {
@@ -129,13 +129,25 @@ section {
     width: auto;
     justify-content: center;
     background-color: #0D0D0D;
-    color:#F2F2F2;
+    color:aqua;
     padding: 14px 20px;
+    margin: 8px;
     margin: 8px 0;
+
     border: none;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     cursor: pointer;
-    box-shadow: 1px 1px 10px 5px #979DA6;
+    border-radius: 15px;
+    box-shadow: 1px 5px #F2F2F2;
+
+}
+
+.button:hover {background-color: darkblue}
+
+.button:active {
+    background-color: darkblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .hidden1 {
