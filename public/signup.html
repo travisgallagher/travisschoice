@@ -28,23 +28,27 @@
             <div class="text signup-div">
                     <br>
                 <label class="childFormLabel for="fname">First Name:</label>
-                    <input class="childForm" required type="text" name="fname" id="fname" placeholder="first name...">
+                    <input class="loginTxt" required type="text" name="fname" id="fname" placeholder="first name...">
                     <br>
                     <br>
                 <label class="childFormLabel for="lname"/>Last Name:</label>
-                    <input class="childForm" required type="text" name="lname" id="lname" placeholder="last name..." >
+                    <input class="loginTxt" required type="text" name="lname" id="lname" placeholder="last name..." >
+                    <br>
+                    <br>
+                <label class="childFormLabel for="user-name"/>Create a username:</label>
+                    <input class="loginTxt" required type="text" name="user-name" id="username" placeholder="TrAvIsThEgReAt" >
                     <br>
                     <br>
                 <label class="childFormLabel for="email"/>Email Address:</label>
-                    <input class="childForm" required type="text" name="email" id="email" placeholder="anyemail@gmail.com" >
+                    <input class="loginTxt" required type="text" name="email" id="email" placeholder="anyemail@gmail.com" >
                     <br>
                     <br>
                 <label class="childFormLabel" for="psw">Password:</label>
-                    <input class="childForm" type="password" placeholder="Enter Password" name="psw" required>
+                    <input class="loginTxt" type="password" placeholder="Enter Password" name="psw" required>
                     <br>
                     <br>
                 <label class="childFormLabel" for="psw-repeat">Repeat Password:</label>
-                    <input class="childForm" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <input class="loginTxt" type="password" placeholder="Repeat Password" name="psw-repeat" required>
                     <br>
                 <label>
                     <br>
@@ -52,7 +56,7 @@
                 </label>
                 <br>
                 <button type="button" class="button childForm" onclick="redirectHome()">Cancel</button>
-                <button type="submit" class="button childForm" onclick="redirectHome()">Sign Up</button>
+                <button type="button" class="button childForm" onclick="signUp()">Sign Up</button>
             </div>
         </form>
     </section>

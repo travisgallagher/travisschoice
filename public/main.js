@@ -246,16 +246,47 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
     })
 })
 
-function handleSubmit (e) {
-    e.preventDefault(); 
+function handleSubmit () {
 
-    window.alert("Submitted Successfully! Thank you for the feedback!")
     const inputs = document.querySelectorAll(".loginTxt")
+    const firstName = document.querySelector("#fname").value
     
     inputs.forEach(input => {
         input.value = ""; 
     }); 
+
+    window.alert(`${firstName} your message was sent successfully! Thank you for the feedback!`)
+    redirectHome()
 }; 
+
+function login() {
+    const inputs = document.querySelectorAll(".loginTxt")
+    const userName = document.querySelector("#user-name").value
+
+    inputs.forEach(input => {
+        input.value = ""; 
+    }); 
+
+    window.alert(`Welcome back ${userName}!`)
+    redirectHome()
+    
+}
+
+function signUp() {
+    const inputs = document.querySelectorAll(".loginTxt")
+    const firstName = document.querySelector("#fname").value
+    const lastName = document.querySelector("#lname").value
+
+    inputs.forEach(input => {
+        input.value = ""; 
+    }); 
+
+    window.alert(`Welcome to Travis's Choice ${firstName} ${lastName}!`)
+    redirectLogin()
+}
+function redirectLogin() {
+    location.href = "./login"
+}
 
 function redirectHome(e) {
     location.href = "./"
