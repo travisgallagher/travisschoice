@@ -63,18 +63,25 @@ function createRow(business) {
     let checkBoxCell = newRow.insertCell(); 
     let cb = document.createElement(`input`)
     cb.type = `checkbox`;
+    cb.name = "check"
     cb.value = `${business.name}`
     cb.classList.add("checkbox");
     cb.id = JSON.stringify(business)
-    
     checkBoxCell.appendChild(cb);
+}
+
+function checkUncheck(main) {
+    all = document.getElementsByName("check"); 
+    for (let i = 0; i < all.length; i++) {
+        all[i].checked = main.checked; 
+    }
 }
 
 const addRest = () => {
     hiddenClass1.classList.add(`hidden1`);
     hiddenClass4.classList.add(`hidden4`);
-    
     hiddenClass2.classList.remove(`hidden2`)
+    
     let checkboxes = document.querySelectorAll(".checkbox")
     let choices = [];
     checkboxes.forEach(element => {
