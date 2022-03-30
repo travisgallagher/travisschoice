@@ -2,8 +2,12 @@ Travis's Choice
 
 Developer: Travis Gallagher
 
+Video Presentation: https://youtu.be/ZqepbgLqdjo
+
 Deployed on Heroku: https://traviss-choice.herokuapp.com/
 Other Domain Name: https://travisschoice.com/
+
+GitHub link: https://github.com/travisgallagher/travisschoice
 
 Developer's Linkedin: https://www.linkedin.com/in/travis-gallagher-37509116b/
 
