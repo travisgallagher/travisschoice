@@ -136,7 +136,6 @@ function createRowChoices(choice) {
         }) 
     newRow.remove()
     })
-    
     deleteBtnCell.appendChild(deleteBtn)
     window.scrollTo(0, document.body.scrollHeight); 
 

@@ -21,6 +21,8 @@ Technologies:
     <br>
     API: Yelp Fusion, Postman to test endpoints
     <br>
+    Adobe Color: For color palette
+    <br>
 
 MVP: <br>
 <ol type="1">
@@ -45,7 +47,6 @@ Additional Features: <br>
     <li>Pressing the website will load the yelp website for the restaurant</li><br>
 </ol>
 
-
 Screenshots:
 <br>
 <img width="1512" alt="Screen Shot 2022-03-29 at 5 16 47 PM" src="https://user-images.githubusercontent.com/92351358/160722847-fee7a211-64bc-4e6f-8636-794fc4bb934f.png">
@@ -56,6 +57,9 @@ Screenshots:
 <br>
 <img width="1500" alt="Screen Shot 2022-03-29 at 5 19 51 PM" src="https://user-images.githubusercontent.com/92351358/160722832-732b9a86-79f2-486a-88f9-0a7346ac99ee.png">
 <br>
+
+Website Flow: <br>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FZPFtFAAdVh2T6tA1lzmbD8%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
 Author: 
     Travis Gallagher, Web-Developer, Salt Lake City, UT 
