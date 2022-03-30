@@ -166,7 +166,6 @@ section {
     display:none;
 }
 
-
 table.table td, table.table th {
     text-align: center;
     color: #0D0D0D;
@@ -239,7 +238,6 @@ table.table th {
     align-self: center;
 }
 
-
 #final-div {
     display: flex;
     flex-wrap: wrap;
@@ -275,9 +273,6 @@ table.table th {
     align-self: center;
 }
 
-
-/* Login css */
-
 .loginLab {
     border-radius: 25px;
     padding: 5px;
@@ -287,7 +282,6 @@ table.table th {
     align-items: center;
     font-weight: bold;
     text-decoration: underline;
-
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -306,7 +300,6 @@ table.table th {
 }
 
 .signup-div{
-    /* justify-content: flex-end; */
     text-align: center;
     border: 3px solid black ;
     border-radius: 10px;
@@ -319,12 +312,7 @@ table.table th {
 .psw {
     background-color: #979DA6 ;
     border-radius: 3px solid #344037;
-
 }
-
-/* Sign-up css */
-
-/* contact-us css */
 
 #travis-pic {
     max-width: 25%;
@@ -355,7 +343,6 @@ table.table th {
 
 footer {
     width: 100%;
-    /* position: fixed; */
     bottom: 0;
     left: 0;
     right: 0;
@@ -363,14 +350,13 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
 #logo{
     border-radius: 30px;
     max-height: 200px;
     max-width: 200px;
     
 }
-
-
 
 /* Color Theme*/
 /* 
