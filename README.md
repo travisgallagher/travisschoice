@@ -47,6 +47,11 @@ Additional Features: <br>
     <li>Pressing the website will load the yelp website for the restaurant</li><br>
 </ol>
 
+Project Wireframe's: 
+<br>
+<img width="1500" alt="Screen Shot 2022-03-29 at 5 19 51 PM" src="https://user-images.githubusercontent.com/92351358/160753753-c391d99b-3e06-4137-a096-d6af8ad14aec.png">
+<br>
+
 Screenshots:
 <br>
 <img width="1512" alt="Screen Shot 2022-03-29 at 5 16 47 PM" src="https://user-images.githubusercontent.com/92351358/160722847-fee7a211-64bc-4e6f-8636-794fc4bb934f.png">
