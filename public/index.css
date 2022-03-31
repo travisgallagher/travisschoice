@@ -358,6 +358,29 @@ footer {
     
 }
 
+#social-div {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    text-align: center;
+    width: 75%;
+    border: 3px solid #979DA6 ;
+    border-radius: 15px;
+    background-color: #636A73;
+    color: #344037;
+}
+
+.social-a {
+    background-color: black;
+    color: white;
+}
+
 /* Color Theme*/
 /* 
 { color: #636A73; }
