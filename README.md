@@ -51,7 +51,7 @@ Additional Features: <br>
     <li>Pressing the website will load the yelp website for the restaurant</li><br>
 </ol>
 
-Project Wireframe's: 
+Project Wireframe's: https://www.figma.com/file/13yyWcm7WZjIB62hwmls0A/Project's-Wireframe
 <br>
 <img width="1500" alt="Screen Shot 2022-03-29 at 5 19 51 PM" src="https://user-images.githubusercontent.com/92351358/160753753-c391d99b-3e06-4137-a096-d6af8ad14aec.png">
 <br>
@@ -69,7 +69,7 @@ Screenshots:
 <img width="1510" alt="Screen Shot 2022-03-29 at 11 25 30 PM" src="https://user-images.githubusercontent.com/92351358/160757387-0777a43f-9e42-4438-8ba0-991fc0ef973e.png">
 <br>
 
-Website Flow:
+Website Flow: https://www.figma.com/file/ZPFtFAAdVh2T6tA1lzmbD8/Flow-of-Travis's-Choice
 <br>
 <img width="1500" alt="Screen Shot 2022-03-29 at 5 19 51 PM" src="https://user-images.githubusercontent.com/92351358/160749042-662e5313-5ffa-4e7c-97f9-aaf9585e9256.png">
 <br>
