@@ -21,14 +21,14 @@
 li a {
     display: block;
     background-color: #0D0D0D;
-    color:aqua;
+    color:#F2F2F2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: darkblue;
+    background-color: #636A73;
 }
 
 h1 {
@@ -43,8 +43,8 @@ h1 {
     margin-right: auto;
     text-align: center;
     width: 60%;
-    color: lightblue; 
-    background-color: black;
+    color: #F2F2F2;
+    background-color: #0D0D0D;
 }
 
 .header{
@@ -60,7 +60,7 @@ h1 {
     margin-right: auto;
     text-align: center;
     width: 60%;
-    color: aqua;
+    color: #0D0D0D;
     background-color: #979DA6;
 }
 
@@ -70,7 +70,7 @@ h1 {
     padding: 20px;
     margin: 10px;
     background-color: #979DA6 ;
-    color: black;
+    color: #0D0D0D;
 }
 
 section {
@@ -106,48 +106,36 @@ section {
     margin-left:auto;
     margin-right:auto;
     text-align: left;
-    width: 55%;
+    width: 65%;
 }
 
 .childForm {
-    border: 3px solid #344037 ;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: #F2F2F2 ;
-    color: #0D0D0D;
-    text-align: center;
+    display: inline-block;
+    width: 75%;
+    margin: 15px;
+    height: 50%;
+    background-color: #F2F2F2;
 }
 
 .childFormLabel {
-    margin-left:auto;
-    margin-right:auto;
-    text-align: left;
-    width: 55%;
+    display: inline-block;
+    margin: 15px;
+    background-color: #979DA6;
+    font-weight: bold;
+
 }
 
 .button {
     width: auto;
     justify-content: center;
     background-color: #0D0D0D;
-    color:aqua;
+    color:#F2F2F2;
     padding: 14px 20px;
-    margin: 8px;
     margin: 8px 0;
-
     border: none;
-    /* border-radius: 4px; */
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 15px;
-    box-shadow: 1px 5px #F2F2F2;
-
-}
-
-.button:hover {background-color: darkblue}
-
-.button:active {
-    background-color: darkblue;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    box-shadow: 1px 1px 10px 5px #979DA6;
 }
 
 .hidden1 {
@@ -165,6 +153,16 @@ section {
 .hidden5 {
     display:none;
 }
+
+#check-all {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 120px;
+    border: 3px solid blue;
+
+}
+
 
 table.table td, table.table th {
     text-align: center;
@@ -238,6 +236,7 @@ table.table th {
     align-self: center;
 }
 
+
 #final-div {
     display: flex;
     flex-wrap: wrap;
@@ -273,6 +272,9 @@ table.table th {
     align-self: center;
 }
 
+
+/* Login css */
+
 .loginLab {
     border-radius: 25px;
     padding: 5px;
@@ -282,6 +284,7 @@ table.table th {
     align-items: center;
     font-weight: bold;
     text-decoration: underline;
+
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -299,20 +302,16 @@ table.table th {
     text-align: center;
 }
 
-.signup-div{
-    text-align: center;
-    border: 3px solid black ;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #979DA6 ;
-    color: #0D0D0D;
-}
 
 .psw {
     background-color: #979DA6 ;
     border-radius: 3px solid #344037;
+
 }
+
+/* Sign-up css */
+
+/* contact-us css */
 
 #travis-pic {
     max-width: 25%;
@@ -343,6 +342,7 @@ table.table th {
 
 footer {
     width: 100%;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     right: 0;
@@ -350,35 +350,27 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
 #logo{
-    border-radius: 30px;
-    max-height: 200px;
-    max-width: 200px;
-    
+    border-radius: 15px;   
 }
 
-#social-div {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	align-items: center;
-	align-content: stretch;
-    margin-left:auto;
-    margin-right:auto;
-    padding: 10px;
-    text-align: center;
-    width: 75%;
-    border: 3px solid #979DA6 ;
-    border-radius: 15px;
-    background-color: #636A73;
-    color: #344037;
+#nurses{
+    display: inline-flex;
+    width: auto;
+    height: auto;
 }
 
-.social-a {
-    background-color: black;
-    color: white;
+#redo{
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+#redo {
+    width: 250px;
+    height: 100px;
+    font-size: large;
+    color:aqua
 }
 
 /* Color Theme*/

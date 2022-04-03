@@ -11,6 +11,7 @@ let getStartedBtn = document.getElementById("get-started")
 let submitMessage = document.querySelector("#contact-form")
 let homeBtn = document.querySelector("#home-button")
 let logo = document.querySelector("#logo")
+let redo = document.querySelector("#redo")
 
 const getStarted = (e) => {
     hiddenClass4.classList.remove(`hidden4`)
@@ -285,6 +286,7 @@ function redirectHome(e) {
     location.href = "./"
 }
 
+redo.addEventListener("click", getRandomRest)
 logo.addEventListener("click", redirectHome)
 getStartedBtn.addEventListener("click", getStarted); 
 sortTableByColumn(document.querySelector("table"), 0); 
