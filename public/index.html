@@ -27,16 +27,17 @@
             <h1 class="header"">What is Travis's Choice?</h1>
 
             <p class="text">
-                Travis's Choice is a random restaurant selector. <br>
-                Pick which restaurants sound good, and I will decide which one you eat at! <br>
+                Can't decide where to eat? <br>
+                Let Travis's Choice help you out! <br>
+                Our random restaurant generator will decide where you eat with the click of a button. 
+                <br> All you have to do is follow the Instructions, sit back, and enjoy!
             </p>
             <h1 class="header">Instructions:</h1>
             <ol type="1" class="text">
-                <li class="info-ol">Enter your zipcode</li>
-                <li class="info-ol">Select the number of restaurants you would like to look at</li>
-                <li class="info-ol">Push the "load restaurants" button</li>
-                <li class="info-ol">Select the restaurants you want added to your list of possible meal choices</li>
-                <li class="info-ol">Push the "Travis Pick" button, and I will select which restaurant you eat at!</li>
+                <li class="info-ol">Enter your ZIP code</li>
+                <li class="info-ol">Select the number of restaurants you would like to appear, and press load restaurants </li>
+                <li class="info-ol">Pick the restaurants you want Travis to consider</li>
+                <li class="info-ol">Push the "Travis Choose" button, and enjoy!</li>
             </ol>
 
             <button class="button" id="get-started">Get Started!</button>
@@ -70,11 +71,13 @@
                         <th>Description</th>
                         <th>Price</th>
                         <th>Rating</th>
-                        <th>Add to list</th>
+                        <th>Add to list <br><br>
+                            <input type="checkbox" onclick="checkUncheck(this)">    Check All</input>
+                        </th>
                     </tr>
                 </thead>
                 <tbody id="t-body">
-                    <input class="button" id="check-all" type="checkbox" onclick="checkUncheck(this)">Check All</input>
+                    <!-- <input class="button" id="check-all" type="checkbox" onclick="checkUncheck(this)">Check All</input> -->
 
                 </tbody>
             </table>
@@ -120,13 +123,13 @@
         <br>
         <div class="info" id="redo-div">
             <h1>Are you indecisive like my wife and the nurses I work with? This option is for you!</h1>
-            <button class="button" id="redo">Travis choose again!</button>
+            <button class="button" id="redo">Travis, choose again!</button>
         </div>  
         <button class="button" id="home-button">Go Home</button> 
     </section>
         
     <footer>
-        <img id="logo" src="https://lh3.googleusercontent.com/d1DdPZBl1nV6e90IrxjzZ7GV-BTXerPoKimZncH0jxSSO5WPz7eZDnHc1zODTmaX7cvkHXAccplegBJW0aSoNESHX-SmLYGtEoMNGnYedcflHwLMmPshNc56ZCsJN_RvDNqTlp4now=s200-p-k" alt="Travis's Logo">
+        <img id="logo" src="https://user-images.githubusercontent.com/92351358/160755645-0d1f73e3-168b-4234-9946-bd99e9d3c745.jpeg" alt="Travis's Logo">
     </footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
